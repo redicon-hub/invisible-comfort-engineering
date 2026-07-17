@@ -172,9 +172,9 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1.05rem 1.9rem;
-  background: color-mix(in oklab, var(--graphite) 82%, transparent);
+  gap: 0.7rem;
+  padding: 1rem 1.9rem;
+  background: color-mix(in oklab, var(--graphite) 75%, transparent);
   color: var(--lime);
   font-family: var(--font-sans);
   font-size: 0.78rem;
@@ -183,39 +183,30 @@
   text-transform: uppercase;
   border-radius: 999px;
   border: 1px solid color-mix(in oklab, var(--lime) 22%, transparent);
-  backdrop-filter: blur(16px) saturate(150%);
-  box-shadow:
-    0 0 24px -6px color-mix(in oklab, var(--cypress) 55%, transparent),
-    0 0 60px -18px color-mix(in oklab, var(--cypress) 70%, transparent);
-  transition: background 0.4s, box-shadow 0.4s, gap 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s;
+  backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 0 28px -8px color-mix(in oklab, var(--cypress) 60%, transparent);
+  transition: background 220ms ease, border-color 220ms ease, box-shadow 260ms ease, color 220ms ease;
   cursor: pointer;
   isolation: isolate;
+  & > span { transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1); }
   &:hover {
-    gap: 1.1rem;
-    background: color-mix(in oklab, var(--cypress) 78%, transparent);
-    border-color: color-mix(in oklab, var(--lime) 38%, transparent);
-    box-shadow:
-      0 0 32px -4px color-mix(in oklab, var(--cypress) 85%, transparent),
-      0 0 80px -10px color-mix(in oklab, var(--cypress) 90%, transparent),
-      0 0 0 1px color-mix(in oklab, var(--cypress) 30%, transparent);
+    background: color-mix(in oklab, var(--cypress) 82%, transparent);
+    border-color: color-mix(in oklab, var(--lime) 40%, transparent);
+    box-shadow: 0 0 36px -4px color-mix(in oklab, var(--cypress) 80%, transparent);
   }
+  &:hover > span { transform: translateX(4px); }
 }
 
 @utility btn-invert {
-  background: color-mix(in oklab, #ffffff 70%, transparent);
+  background: color-mix(in oklab, #ffffff 75%, transparent);
   color: var(--graphite);
-  border: 1px solid color-mix(in oklab, var(--graphite) 14%, transparent);
-  box-shadow:
-    0 0 28px -6px rgba(255, 255, 255, 0.7),
-    0 0 70px -18px rgba(255, 255, 255, 0.8);
+  border: 1px solid color-mix(in oklab, var(--graphite) 16%, transparent);
+  box-shadow: 0 0 32px -8px rgba(255, 255, 255, 0.75);
   &:hover {
     background: color-mix(in oklab, #ffffff 92%, transparent);
     color: var(--graphite);
-    border-color: color-mix(in oklab, var(--graphite) 22%, transparent);
-    box-shadow:
-      0 0 36px -4px rgba(255, 255, 255, 0.9),
-      0 0 90px -10px rgba(255, 255, 255, 0.95),
-      0 0 0 1px rgba(255, 255, 255, 0.6);
+    border-color: color-mix(in oklab, var(--graphite) 26%, transparent);
+    box-shadow: 0 0 40px -4px rgba(255, 255, 255, 0.95);
   }
 }
 
@@ -223,9 +214,9 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1.05rem 1.9rem;
-  background: color-mix(in oklab, currentColor 8%, transparent);
+  gap: 0.7rem;
+  padding: 1rem 1.9rem;
+  background: color-mix(in oklab, currentColor 6%, transparent);
   color: currentColor;
   font-family: var(--font-sans);
   font-size: 0.78rem;
@@ -233,24 +224,21 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   border-radius: 999px;
-  border: 1px solid color-mix(in oklab, currentColor 30%, transparent);
-  backdrop-filter: blur(16px) saturate(150%);
-  box-shadow:
-    0 0 22px -8px color-mix(in oklab, currentColor 40%, transparent),
-    0 0 55px -18px color-mix(in oklab, currentColor 55%, transparent);
-  transition: gap 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.35s, border-color 0.35s, box-shadow 0.45s;
+  border: 1px solid color-mix(in oklab, currentColor 32%, transparent);
+  backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 0 26px -10px color-mix(in oklab, currentColor 50%, transparent);
+  transition: background 220ms ease, border-color 220ms ease, box-shadow 260ms ease;
   cursor: pointer;
   isolation: isolate;
+  & > span { transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1); }
   &:hover {
-    gap: 1.1rem;
-    background: color-mix(in oklab, currentColor 14%, transparent);
-    border-color: color-mix(in oklab, currentColor 50%, transparent);
-    box-shadow:
-      0 0 32px -4px color-mix(in oklab, currentColor 60%, transparent),
-      0 0 80px -10px color-mix(in oklab, currentColor 70%, transparent),
-      0 0 0 1px color-mix(in oklab, currentColor 25%, transparent);
+    background: color-mix(in oklab, currentColor 12%, transparent);
+    border-color: color-mix(in oklab, currentColor 55%, transparent);
+    box-shadow: 0 0 34px -4px color-mix(in oklab, currentColor 65%, transparent);
   }
+  &:hover > span { transform: translateX(4px); }
 }
+
 
 
 @utility rule-hair {
