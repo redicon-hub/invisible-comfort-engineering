@@ -83,14 +83,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Dal 2003 progettiamo e realizziamo impianti, piscine ed energia per aziende, boutique, ville e residenze di prestigio in Italia e all'estero.",
       },
-      { property: "og:title", content: "SP Termoidraulica — L'ingegneria invisibile del comfort" },
+      { property: "og:title", content: "SP Termoidraulica — Impianti, piscine ed energia per progetti d'eccellenza" },
       {
         property: "og:description",
         content:
-          "Impianti, piscine, energia. Un unico interlocutore per progetti d'eccellenza, dalla Toscana ai cantieri internazionali.",
+          "Dal 2003 progettiamo e realizziamo impianti, piscine ed energia per aziende, boutique, ville e residenze di prestigio in Italia e all'estero.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "SP Termoidraulica — Impianti, piscine ed energia per progetti d'eccellenza" },
+      { name: "twitter:description", content: "Dal 2003 progettiamo e realizziamo impianti, piscine ed energia per aziende, boutique, ville e residenze di prestigio in Italia e all'estero." },
+      { property: "og:image", content: "https://id-preview--ccfdb605-8e40-42b9-8638-f8be0c084f8f.lovable.app/og-image.jpg" },
+      { name: "twitter:image", content: "https://id-preview--ccfdb605-8e40-42b9-8638-f8be0c084f8f.lovable.app/og-image.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
