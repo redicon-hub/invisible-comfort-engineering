@@ -151,7 +151,7 @@ function HeroSlider() {
         <div className="container-editorial flex flex-wrap items-center justify-between gap-x-10 gap-y-3 py-4 text-lime/85">
           <span className="eyebrow text-lime/70">Dal 2003</span>
           <span className="eyebrow text-lime/70">Italia e cantieri internazionali</span>
-          <span className="eyebrow text-lime/70">Circa 30 professionisti</span>
+          <span className="eyebrow text-lime/70">Tecnologia e metodo in costante evoluzione</span>
         </div>
       </div>
 
