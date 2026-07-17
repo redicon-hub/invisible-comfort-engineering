@@ -135,7 +135,7 @@ function HeroSlider() {
             <h1 className="display-hero text-lime">{SCENES[i].title}</h1>
             <p className="body-editorial mt-6 max-w-xl text-lime/85">{SCENES[i].text}</p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href={SCENES[i].cta1.href} className="btn-primary" style={{ background: "var(--lime)", color: "var(--graphite)" }}>
+              <a href={SCENES[i].cta1.href} className="btn-primary btn-invert">
                 {SCENES[i].cta1.label} <span aria-hidden>→</span>
               </a>
               <a href={SCENES[i].cta2.href} className="btn-ghost text-lime">
