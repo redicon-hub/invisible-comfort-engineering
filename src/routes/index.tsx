@@ -215,14 +215,17 @@ function Header() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-          scrolled ? "bg-lime/95 backdrop-blur-md text-graphite border-b border-taupe/15" : "text-lime"
+          scrolled
+            ? "bg-lime/95 backdrop-blur-md text-graphite border-b border-taupe/15"
+            : "text-lime [text-shadow:0_1px_16px_rgba(0,0,0,0.55)]"
         }`}
       >
         <div className="container-editorial flex items-center justify-between py-5 md:py-6">
           <a href="#top" className="flex items-baseline gap-3">
             <span className="font-serif text-2xl tracking-tight">SP</span>
-            <span className="eyebrow hidden sm:inline">Termoidraulica</span>
+            <span className="eyebrow hidden sm:inline" style={{ color: "inherit" }}>Termoidraulica</span>
           </a>
+
           <nav aria-label="Menu principale" className="hidden lg:flex items-center gap-9">
             {NAV.slice(0, -1).map((n) => (
               <a
