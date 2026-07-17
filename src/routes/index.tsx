@@ -320,8 +320,8 @@ function Manifesto() {
         <div className="grid gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-5">
             <p className="eyebrow">2003</p>
-            <p className="mt-3 font-serif text-5xl md:text-6xl text-graphite">4 persone</p>
-            <p className="mt-2 text-sm text-taupe">Nascita dell'azienda</p>
+            <p className="mt-3 font-serif text-5xl md:text-6xl text-graphite">Officina artigiana</p>
+            <p className="mt-2 text-sm text-taupe">Le radici, l'esperienza diretta sul cantiere</p>
           </div>
           <div className="md:col-span-2 hidden md:block">
             <div className="relative h-px w-full bg-taupe/30">
@@ -330,8 +330,8 @@ function Manifesto() {
           </div>
           <div className="md:col-span-5 md:text-right">
             <p className="eyebrow">Oggi</p>
-            <p className="mt-3 font-serif text-5xl md:text-6xl text-graphite">≈ 30 persone</p>
-            <p className="mt-2 text-sm text-taupe">Progetti in Italia e all'estero</p>
+            <p className="mt-3 font-serif text-5xl md:text-6xl text-graphite">Impresa tecnologica</p>
+            <p className="mt-2 text-sm text-taupe">Progettazione digitale, BIM, monitoraggio e sistemi integrati</p>
           </div>
         </div>
       </div>
