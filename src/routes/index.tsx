@@ -237,9 +237,9 @@ function Header() {
           <div className="flex items-center gap-4">
             <a
               href="#contatti"
-              className="hidden md:inline-flex items-center gap-2 text-xs font-medium tracking-[0.18em] uppercase transition-opacity hover:opacity-60"
+              className="btn-primary hidden md:inline-flex"
             >
-              Parliamo del progetto <span aria-hidden>→</span>
+              Parliamo del tuo progetto <span aria-hidden>→</span>
             </a>
             <button
               onClick={() => setOpen(true)}
