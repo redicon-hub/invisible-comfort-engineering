@@ -135,7 +135,7 @@ function HeroSlider() {
             <h1 className="display-hero text-lime">{SCENES[i].title}</h1>
             <p className="body-editorial mt-6 max-w-xl text-lime/85">{SCENES[i].text}</p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href={SCENES[i].cta1.href} className="btn-primary" style={{ background: "var(--lime)", color: "var(--graphite)" }}>
+              <a href={SCENES[i].cta1.href} className="btn-primary btn-invert">
                 {SCENES[i].cta1.label} <span aria-hidden>→</span>
               </a>
               <a href={SCENES[i].cta2.href} className="btn-ghost text-lime">
@@ -151,7 +151,7 @@ function HeroSlider() {
         <div className="container-editorial flex flex-wrap items-center justify-between gap-x-10 gap-y-3 py-4 text-lime/85">
           <span className="eyebrow text-lime/70">Dal 2003</span>
           <span className="eyebrow text-lime/70">Italia e cantieri internazionali</span>
-          <span className="eyebrow text-lime/70">Circa 30 professionisti</span>
+          <span className="eyebrow text-lime/70">Tecnologia e metodo in costante evoluzione</span>
         </div>
       </div>
 
@@ -237,9 +237,9 @@ function Header() {
           <div className="flex items-center gap-4">
             <a
               href="#contatti"
-              className="hidden md:inline-flex items-center gap-2 text-xs font-medium tracking-[0.18em] uppercase transition-opacity hover:opacity-60"
+              className="btn-primary hidden md:inline-flex"
             >
-              Parliamo del progetto <span aria-hidden>→</span>
+              Parliamo del tuo progetto <span aria-hidden>→</span>
             </a>
             <button
               onClick={() => setOpen(true)}
@@ -320,8 +320,8 @@ function Manifesto() {
         <div className="grid gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-5">
             <p className="eyebrow">2003</p>
-            <p className="mt-3 font-serif text-5xl md:text-6xl text-graphite">4 persone</p>
-            <p className="mt-2 text-sm text-taupe">Nascita dell'azienda</p>
+            <p className="mt-3 font-serif text-5xl md:text-6xl text-graphite">Officina artigiana</p>
+            <p className="mt-2 text-sm text-taupe">Le radici, l'esperienza diretta sul cantiere</p>
           </div>
           <div className="md:col-span-2 hidden md:block">
             <div className="relative h-px w-full bg-taupe/30">
@@ -330,8 +330,8 @@ function Manifesto() {
           </div>
           <div className="md:col-span-5 md:text-right">
             <p className="eyebrow">Oggi</p>
-            <p className="mt-3 font-serif text-5xl md:text-6xl text-graphite">≈ 30 persone</p>
-            <p className="mt-2 text-sm text-taupe">Progetti in Italia e all'estero</p>
+            <p className="mt-3 font-serif text-5xl md:text-6xl text-graphite">Impresa tecnologica</p>
+            <p className="mt-2 text-sm text-taupe">Progettazione digitale, BIM, monitoraggio e sistemi integrati</p>
           </div>
         </div>
       </div>
@@ -777,19 +777,19 @@ function Numbers() {
   return (
     <section className="bg-lime py-28 md:py-40">
       <div className="container-editorial max-w-3xl">
-        <p className="eyebrow">Dimensione aziendale</p>
+        <p className="eyebrow">Crescita e tecnologia</p>
         <h2 className="display-section mt-6 text-graphite">
-          Una crescita <em className="italic">costruita sul lavoro.</em>
+          Un'impresa in <em className="italic">costante evoluzione.</em>
         </h2>
         <p className="body-editorial mt-6">
-          Le dimensioni sono cambiate. Il principio è rimasto lo stesso: assumersi la
-          responsabilità del risultato.
+          Cresciamo investendo in metodo, competenze e tecnologia. Il principio è rimasto lo
+          stesso dal primo giorno: assumersi la responsabilità del risultato.
         </p>
       </div>
       <div className="container-editorial mt-16 grid gap-10 md:grid-cols-3 border-y border-taupe/25 py-16">
         {[
           { big: "2003", small: "L'anno di fondazione" },
-          { big: "4 → 30", small: "Persone: dalla squadra iniziale a oggi" },
+          { big: "BIM + IoT", small: "Progettazione digitale, monitoraggio e sistemi integrati" },
           { big: "IT / EU", small: "Cantieri in Italia e all'estero" },
         ].map((s) => (
           <div key={s.big}>

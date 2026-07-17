@@ -169,42 +169,113 @@
 }
 
 @utility btn-primary {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 1.05rem 1.75rem;
-  background: var(--graphite);
+  padding: 1.05rem 1.9rem;
+  background: linear-gradient(135deg, var(--graphite) 0%, color-mix(in oklab, var(--graphite) 70%, var(--cypress)) 100%);
   color: var(--lime);
   font-family: var(--font-sans);
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s, gap 0.4s;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--lime) 14%, transparent);
+  box-shadow:
+    0 10px 30px -10px color-mix(in oklab, var(--cypress) 60%, transparent),
+    0 2px 8px -2px color-mix(in oklab, var(--graphite) 40%, transparent),
+    inset 0 1px 0 color-mix(in oklab, var(--lime) 22%, transparent),
+    inset 0 -1px 0 color-mix(in oklab, var(--graphite) 60%, transparent);
+  backdrop-filter: blur(10px) saturate(140%);
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.4s, box-shadow 0.4s, gap 0.4s;
   cursor: pointer;
-  border: none;
+  overflow: hidden;
+  isolation: isolate;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(180deg, color-mix(in oklab, var(--lime) 18%, transparent) 0%, transparent 55%);
+    pointer-events: none;
+    z-index: -1;
+  }
   &:hover {
-    background: var(--cypress);
     gap: 1.1rem;
+    background: linear-gradient(135deg, var(--cypress) 0%, color-mix(in oklab, var(--cypress) 70%, var(--graphite)) 100%);
+    box-shadow:
+      0 16px 46px -10px color-mix(in oklab, var(--cypress) 85%, transparent),
+      0 0 0 4px color-mix(in oklab, var(--cypress) 14%, transparent),
+      inset 0 1px 0 color-mix(in oklab, var(--lime) 28%, transparent);
+  }
+}
+
+@utility btn-invert {
+  background: linear-gradient(135deg, #ffffff 0%, var(--lime) 100%);
+  color: var(--graphite);
+  border: 1px solid color-mix(in oklab, var(--graphite) 12%, transparent);
+  box-shadow:
+    0 12px 34px -10px color-mix(in oklab, var(--lime) 70%, transparent),
+    0 0 24px -4px rgba(255, 255, 255, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1px 0 color-mix(in oklab, var(--taupe) 25%, transparent);
+  &::before {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, transparent 60%);
+  }
+  &:hover {
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    color: var(--graphite);
+    box-shadow:
+      0 18px 50px -10px color-mix(in oklab, var(--lime) 95%, transparent),
+      0 0 0 4px color-mix(in oklab, var(--lime) 55%, transparent),
+      0 0 40px -6px rgba(255, 255, 255, 0.7),
+      inset 0 1px 0 rgba(255, 255, 255, 0.95);
   }
 }
 
 @utility btn-ghost {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 1.05rem 1.75rem;
-  background: transparent;
+  padding: 1.05rem 1.9rem;
+  background: color-mix(in oklab, currentColor 6%, transparent);
   color: currentColor;
   font-family: var(--font-sans);
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  border: 1px solid currentColor;
-  transition: gap 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s, color 0.3s;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, currentColor 32%, transparent);
+  backdrop-filter: blur(14px) saturate(150%);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, currentColor 18%, transparent),
+    0 6px 22px -12px color-mix(in oklab, currentColor 45%, transparent);
+  transition: gap 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.35s, border-color 0.35s, box-shadow 0.45s;
   cursor: pointer;
-  &:hover { gap: 1.1rem; background: currentColor; color: var(--lime); }
+  overflow: hidden;
+  isolation: isolate;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(180deg, color-mix(in oklab, currentColor 12%, transparent) 0%, transparent 55%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  &:hover {
+    gap: 1.1rem;
+    background: color-mix(in oklab, currentColor 16%, transparent);
+    border-color: color-mix(in oklab, currentColor 55%, transparent);
+    box-shadow:
+      inset 0 1px 0 color-mix(in oklab, currentColor 28%, transparent),
+      0 12px 36px -10px color-mix(in oklab, currentColor 55%, transparent),
+      0 0 0 4px color-mix(in oklab, currentColor 10%, transparent);
+  }
 }
 
 @utility rule-hair {
