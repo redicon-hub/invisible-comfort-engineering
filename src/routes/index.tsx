@@ -777,13 +777,13 @@ function Numbers() {
   return (
     <section className="bg-lime py-28 md:py-40">
       <div className="container-editorial max-w-3xl">
-        <p className="eyebrow">Dimensione aziendale</p>
+        <p className="eyebrow">Crescita e tecnologia</p>
         <h2 className="display-section mt-6 text-graphite">
-          Una crescita <em className="italic">costruita sul lavoro.</em>
+          Un'impresa in <em className="italic">costante evoluzione.</em>
         </h2>
         <p className="body-editorial mt-6">
-          Le dimensioni sono cambiate. Il principio è rimasto lo stesso: assumersi la
-          responsabilità del risultato.
+          Cresciamo investendo in metodo, competenze e tecnologia. Il principio è rimasto lo
+          stesso dal primo giorno: assumersi la responsabilità del risultato.
         </p>
       </div>
       <div className="container-editorial mt-16 grid gap-10 md:grid-cols-3 border-y border-taupe/25 py-16">
