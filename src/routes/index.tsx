@@ -789,7 +789,7 @@ function Numbers() {
       <div className="container-editorial mt-16 grid gap-10 md:grid-cols-3 border-y border-taupe/25 py-16">
         {[
           { big: "2003", small: "L'anno di fondazione" },
-          { big: "4 → 30", small: "Persone: dalla squadra iniziale a oggi" },
+          { big: "BIM + IoT", small: "Progettazione digitale, monitoraggio e sistemi integrati" },
           { big: "IT / EU", small: "Cantieri in Italia e all'estero" },
         ].map((s) => (
           <div key={s.big}>
