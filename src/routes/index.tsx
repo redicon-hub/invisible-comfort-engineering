@@ -766,6 +766,15 @@ const PORTFOLIO = [
     span: "md:col-span-4",
   },
   {
+    image: realAtelier.url,
+    cat: "Retail",
+    loc: "Atelier alta moda",
+    title: "Atelier di alta moda in centro storico",
+    note: "Climatizzazione radiante e ricambio aria silenzioso, integrati nei controsoffitti curvi dell'allestimento.",
+    span: "md:col-span-4",
+  },
+
+  {
     image: realResidence.url,
     cat: "Residenze",
     loc: "Residenza privata",
