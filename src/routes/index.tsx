@@ -868,7 +868,7 @@ function Portfolio() {
           aria-modal="true"
           aria-label={current.title}
           onClick={() => setOpen(null)}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-graphite/92 backdrop-blur-sm p-4 md:p-10 animate-[fadeIn_.25s_ease-out]"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-graphite/92 backdrop-blur-sm p-4 md:p-10"
         >
           <button
             type="button"
@@ -882,7 +882,7 @@ function Portfolio() {
             type="button"
             onClick={(e) => { e.stopPropagation(); setOpen((v) => (v === null ? v : (v - 1 + PORTFOLIO.length) % PORTFOLIO.length)); }}
             aria-label="Precedente"
-            className="absolute left-3 md:left-6 flex h-11 w-11 items-center justify-center rounded-full border border-lime/25 text-lime hover:bg-lime/10 transition-colors"
+            className="absolute left-3 md:left-6 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-lime/25 text-lime hover:bg-lime/10 transition-colors"
           >
             ←
           </button>
