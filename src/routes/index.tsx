@@ -1021,15 +1021,11 @@ function ContactForm() {
   }
 
   return (
-    <form onSubmit={submit} className="container-editorial mt-16 grid gap-x-10 gap-y-8 md:grid-cols-2 max-w-4xl mx-auto" noValidate>
+    <form onSubmit={submit} className="container-editorial mt-14 grid gap-x-6 gap-y-5 md:grid-cols-2 max-w-3xl mx-auto" noValidate>
       <div>
         <label className={label} htmlFor="name">Nome e cognome</label>
         <input id="name" name="name" className={field} placeholder="Mario Rossi" />
         {err.name && <p className="mt-2 text-xs text-bronze">{err.name}</p>}
-      </div>
-      <div>
-        <label className={label} htmlFor="company">Azienda <span className="opacity-60">(facoltativo)</span></label>
-        <input id="company" name="company" className={field} placeholder="Studio / Impresa" />
       </div>
       <div>
         <label className={label} htmlFor="email">Email</label>
@@ -1047,10 +1043,7 @@ function ContactForm() {
           {PROJECT_TYPES.map((t) => <option key={t} value={t} className="bg-graphite">{t}</option>)}
         </select>
       </div>
-      <div>
-        <label className={label} htmlFor="location">Località del progetto</label>
-        <input id="location" name="location" className={field} placeholder="Città, Provincia" />
-      </div>
+
       <div className="md:col-span-2">
         <label className={label} htmlFor="message">Messaggio</label>
         <textarea id="message" name="message" rows={4} className={field} placeholder="Raccontaci il progetto…" />
