@@ -11,6 +11,7 @@ import energy from "@/assets/energy.jpg";
 import finalCta from "@/assets/final-cta.jpg";
 import portfolioHospitality from "@/assets/portfolio-hospitality.jpg";
 import portfolioPlant from "@/assets/portfolio-plant.jpg";
+import realAtelier from "@/assets/atelier_alta_moda.jpg.asset.json";
 import realPoolChianti from "@/assets/piscina_privata_toscana.jpg.asset.json";
 import realIndustrial from "@/assets/impianti_industriali.jpg.asset.json";
 import realPoolStone from "@/assets/piscine_private.jpg.asset.json";
@@ -766,6 +767,15 @@ const PORTFOLIO = [
     span: "md:col-span-4",
   },
   {
+    image: realAtelier.url,
+    cat: "Retail",
+    loc: "Atelier alta moda",
+    title: "Atelier di alta moda in centro storico",
+    note: "Climatizzazione radiante e ricambio aria silenzioso, integrati nei controsoffitti curvi dell'allestimento.",
+    span: "md:col-span-4",
+  },
+
+  {
     image: realResidence.url,
     cat: "Residenze",
     loc: "Residenza privata",
@@ -809,19 +819,21 @@ function Portfolio() {
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-graphite/70 via-transparent to-transparent opacity-90" />
-            <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-lime">
-              <div className="flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-lime/80">
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-graphite via-graphite/75 to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-graphite/15 transition-colors duration-500 group-hover:bg-graphite/30" />
+            <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-lime [text-shadow:0_1px_10px_color-mix(in_oklab,var(--color-graphite)_60%,transparent)]">
+              <div className="flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-lime/90">
                 <span>{p.cat}</span>
-                <span className="h-px w-6 bg-lime/60" />
+                <span className="h-px w-6 bg-lime/70" />
                 <span>{p.loc}</span>
               </div>
               <h3 className="mt-3 font-serif text-xl md:text-2xl">{p.title}</h3>
-              <p className="mt-2 max-w-md text-sm leading-relaxed text-lime/75">{p.note}</p>
+              <p className="mt-2 max-w-md text-sm leading-relaxed text-lime/90">{p.note}</p>
               <span className="mt-4 inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Apri il progetto <span aria-hidden>→</span>
               </span>
             </div>
+
           </a>
         ))}
       </div>
