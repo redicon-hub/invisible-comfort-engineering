@@ -950,7 +950,7 @@ function FinalCTA() {
   return (
     <section id="contatti" className="relative overflow-hidden bg-graphite text-lime">
       <div className="relative h-[70svh] min-h-[520px]">
-        <img src={finalCta} alt="Villa toscana con piscina al tramonto" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={finalCta} alt="Piscina a sfioro davanti a casale toscano in pietra" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-graphite via-graphite/60 to-transparent" />
         <div className="container-editorial relative z-10 flex h-full flex-col justify-end pb-16">
           <p className="eyebrow text-lime/70">Contatti</p>
