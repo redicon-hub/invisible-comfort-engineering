@@ -135,7 +135,14 @@ function HeroSlider() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(180deg, rgba(37,36,34,0.35) 0%, rgba(37,36,34,0.15) 30%, rgba(37,36,34,0.65) 100%)",
+                "linear-gradient(180deg, rgba(37,36,34,0.30) 0%, rgba(37,36,34,0.12) 30%, rgba(37,36,34,0.70) 100%)",
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(37,36,34,0.78) 0%, rgba(37,36,34,0.55) 35%, rgba(37,36,34,0.18) 65%, rgba(37,36,34,0) 100%)",
             }}
           />
         </div>
