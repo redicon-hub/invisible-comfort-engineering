@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteFooter } from "@/components/SiteFooter";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 
 import heroPoolAsset from "@/assets/hero-piscina-toscana.jpg.asset.json";
@@ -1088,7 +1089,7 @@ function HomePage() {
         <Numbers />
         <FinalCTA />
       </main>
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }
