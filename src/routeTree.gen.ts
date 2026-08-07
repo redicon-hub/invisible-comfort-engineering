@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProgettiRouteImport } from './routes/progetti'
+import { Route as ContattiRouteImport } from './routes/contatti'
 import { Route as IndexRouteImport } from './routes/index'
 
 const ProgettiRoute = ProgettiRouteImport.update({
   id: '/progetti',
   path: '/progetti',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContattiRoute = ContattiRouteImport.update({
+  id: '/contatti',
+  path: '/contatti',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +31,31 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contatti': typeof ContattiRoute
   '/progetti': typeof ProgettiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contatti': typeof ContattiRoute
   '/progetti': typeof ProgettiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contatti': typeof ContattiRoute
   '/progetti': typeof ProgettiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/progetti'
+  fullPaths: '/' | '/contatti' | '/progetti'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/progetti'
-  id: '__root__' | '/' | '/progetti'
+  to: '/' | '/contatti' | '/progetti'
+  id: '__root__' | '/' | '/contatti' | '/progetti'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContattiRoute: typeof ContattiRoute
   ProgettiRoute: typeof ProgettiRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/progetti'
       fullPath: '/progetti'
       preLoaderRoute: typeof ProgettiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contatti': {
+      id: '/contatti'
+      path: '/contatti'
+      fullPath: '/contatti'
+      preLoaderRoute: typeof ContattiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,18 +87,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContattiRoute: ContattiRoute,
   ProgettiRoute: ProgettiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

@@ -1067,65 +1067,6 @@ function ContactForm() {
 
 /* ---------------- FOOTER ---------------- */
 
-function Footer() {
-  return (
-    <footer className="bg-brown text-lime/80">
-      <div className="container-editorial py-20 md:py-24">
-        <div className="grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <p className="font-serif text-3xl text-lime">SP Termoidraulica</p>
-            <p className="mt-6 max-w-xs text-sm leading-relaxed">
-              SP Termoidraulica S.r.l.<br />
-              Via Renato Guttuso 8<br />
-              52021 Badia Agnano, Bucine (AR)<br />
-              Italia
-            </p>
-            <p className="mt-6 font-serif text-xl italic text-lime">
-              Impianti, acqua ed energia per spazi destinati a durare.
-            </p>
-          </div>
-          <div className="md:col-span-6 grid grid-cols-2 gap-8 sm:grid-cols-3">
-            {[
-              { h: "Azienda", l: ["Chi siamo", "Il team", "Lavora con noi"] },
-              { h: "Impianti", l: ["Commerciali", "Industriali", "Retail"] },
-              { h: "Piscine", l: ["A sfioro", "Acqua salata", "Manutenzione"] },
-              { h: "Atelier & Retail", l: ["Boutique", "Showroom", "Atelier moda"] },
-              { h: "Progetti", l: ["Portfolio", "Case study"] },
-              { h: "Contatti", l: ["Scrivici", "Telefono", "WhatsApp"] },
-            ].map((c) => (
-              <div key={c.h}>
-                <p className="eyebrow text-lime/60">{c.h}</p>
-                <ul className="mt-4 space-y-2 text-sm">
-                  {c.l.map((i) => (
-                    <li key={i}><a href="#" className="hover:text-lime transition-colors">{i}</a></li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="md:col-span-2">
-            <p className="eyebrow text-lime/60">Contatti diretti</p>
-            <ul className="mt-4 space-y-2 text-sm">
-              <li>Tel. —</li>
-              <li>Cell. —</li>
-              <li>WhatsApp —</li>
-              <li>info@—</li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-lime/15 pt-8 text-xs text-lime/50">
-          <p>© {new Date().getFullYear()} SP Termoidraulica S.r.l. — Tutti i diritti riservati.</p>
-          <div className="flex flex-wrap gap-6">
-            <a href="#">Privacy policy</a>
-            <a href="#">Cookie policy</a>
-            <a href="#">Preferenze cookie</a>
-            <a href="#">Dati societari</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
 
 /* ---------------- PAGE ---------------- */
 
