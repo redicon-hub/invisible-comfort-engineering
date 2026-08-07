@@ -1004,8 +1004,9 @@ function ContactForm() {
   };
 
   const field =
-    "w-full border-0 border-b border-lime/25 bg-transparent px-0 py-4 text-lime placeholder:text-lime/40 focus:border-lime focus:outline-none focus:ring-0 transition-colors";
-  const label = "block text-[11px] tracking-[0.2em] uppercase text-lime/60 mb-2";
+    "w-full rounded-xl border border-lime/15 bg-lime/[0.06] px-4 py-3.5 text-[0.95rem] text-lime placeholder:text-lime/35 backdrop-blur-sm outline-none transition-[background,border-color,box-shadow] duration-200 focus:border-lime/40 focus:bg-lime/[0.1] focus:shadow-[0_0_0_3px_color-mix(in_oklab,var(--lime)_10%,transparent)]";
+  const label = "block text-[11px] tracking-[0.2em] uppercase text-lime/55 mb-2";
+
 
   if (status === "sent") {
     return (
