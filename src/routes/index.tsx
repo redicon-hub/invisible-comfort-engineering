@@ -11,6 +11,13 @@ import energy from "@/assets/energy.jpg";
 import finalCta from "@/assets/final-cta.jpg";
 import portfolioHospitality from "@/assets/portfolio-hospitality.jpg";
 import portfolioPlant from "@/assets/portfolio-plant.jpg";
+import realPoolChianti from "@/assets/piscina_privata_toscana.jpg.asset.json";
+import realIndustrial from "@/assets/impianti_industriali.jpg.asset.json";
+import realPoolStone from "@/assets/piscine_private.jpg.asset.json";
+import realPoolIndoor from "@/assets/pisc_ina_privata.jpg.asset.json";
+import realResidence from "@/assets/residenza_privata.jpg.asset.json";
+import realPv from "@/assets/fotovoltaico.jpg.asset.json";
+import realRetail from "@/assets/shoroom_moda.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
