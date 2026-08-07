@@ -380,7 +380,7 @@ const WORLDS = [
     desc: "Piscine a sfioro, anche ad acqua salata, pensate per ville, casali e proprietà di alto pregio.",
     link: "Scopri le piscine",
     href: "#piscine",
-    image: heroPool,
+    image: poolChiantiAsset.url,
   },
   {
     cat: "Residenze & Hospitality",
