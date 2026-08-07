@@ -1145,6 +1145,7 @@ function HomePage() {
         <RetailFeature />
         <PoolFeature />
         <ResidencesFeature />
+        <EnergyLine />
         <MethodTimeline />
         <Portfolio />
         <Numbers />
