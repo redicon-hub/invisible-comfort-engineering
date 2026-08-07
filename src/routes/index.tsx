@@ -9,6 +9,7 @@ import heroIndustrialAsset from "@/assets/hero-industriale-arezzo.jpg.asset.json
 
 const heroIndustrial = heroIndustrialAsset.url;
 import heroRetailAsset from "@/assets/hero-boutique-atelier.jpg.asset.json";
+import poolChiantiAsset from "@/assets/piscina-casale-chianti.jpg.asset.json";
 
 const heroRetail = heroRetailAsset.url;
 import residence from "@/assets/residence.jpg";
