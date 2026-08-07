@@ -9,7 +9,6 @@ import heroIndustrial from "@/assets/hero-industrial.jpg";
 import heroRetail from "@/assets/hero-retail.jpg";
 import residence from "@/assets/residence.jpg";
 import bathroomDetail from "@/assets/bathroom-detail.jpg";
-import poolLandscape from "@/assets/pool-landscape.jpg";
 import energy from "@/assets/energy.jpg";
 import finalCta from "@/assets/final-cta.jpg";
 import portfolioHospitality from "@/assets/portfolio-hospitality.jpg";
