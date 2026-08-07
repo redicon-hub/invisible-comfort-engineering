@@ -609,7 +609,7 @@ function ResidencesFeature() {
         </div>
         <div className="mt-16 grid gap-8 md:grid-cols-12">
           <div className="md:col-span-7 relative aspect-[4/3] overflow-hidden">
-            <img src={residence} alt="Interno di villa toscana" loading="lazy" className="h-full w-full object-cover" />
+            <img src={residenzaCasale.url} alt="Suite in casale toscano con vasca freestanding e travi a vista" loading="lazy" className="h-full w-full object-cover" />
             <span className="absolute bottom-6 left-6 rounded-none bg-lime/95 px-4 py-2 text-xs tracking-[0.2em] uppercase text-graphite">
               Private residences
             </span>
