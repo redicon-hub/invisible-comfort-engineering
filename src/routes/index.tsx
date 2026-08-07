@@ -375,7 +375,7 @@ const WORLDS = [
     desc: "Soluzioni meccaniche, idrauliche, climatiche e antincendio per aziende, attività produttive, contractor e spazi commerciali.",
     link: "Scopri gli impianti",
     href: "#impianti",
-    image: portfolioPlant,
+    image: impiantoProduttivo.url,
   },
   {
     cat: "Piscine & Landscape",
