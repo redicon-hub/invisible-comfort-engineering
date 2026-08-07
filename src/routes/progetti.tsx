@@ -5,17 +5,17 @@ import { PROGETTI } from "@/data/progetti";
 export const Route = createFileRoute("/progetti")({
   head: () => ({
     meta: [
-      { title: "Progetti | SP Termoidraulica — impianti, piscine, industria" },
+      { title: "Progetti | SP Termoidraulica — industria, retail, piscine, residenze" },
       {
         name: "description",
         content:
-          "Le realizzazioni SP Termoidraulica: residenze private, piscine su misura e infrastrutture industriali e commerciali in Toscana e in Italia.",
+          "Le realizzazioni SP Termoidraulica: impianti industriali e commerciali, atelier moda e retail, piscine su misura e residenze private in Toscana e in Italia.",
       },
       { property: "og:title", content: "Progetti | SP Termoidraulica" },
       {
         property: "og:description",
         content:
-          "Residenze private, piscine e infrastrutture industriali: l'ingegneria invisibile del comfort in oltre sessanta realizzazioni.",
+          "Industria, atelier moda, piscine e residenze private: l'ingegneria invisibile del comfort in oltre sessanta realizzazioni.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
