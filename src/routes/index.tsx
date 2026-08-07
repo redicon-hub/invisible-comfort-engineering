@@ -348,24 +348,34 @@ function Manifesto() {
 
       {/* Growth timeline */}
       <div className="container-editorial mt-24 md:mt-32">
-        <div className="grid gap-10 md:grid-cols-12 md:items-end">
-          <div className="md:col-span-5">
-            <p className="eyebrow">2003</p>
-            <p className="mt-3 font-serif text-5xl md:text-6xl text-graphite">Officina artigiana</p>
-            <p className="mt-2 text-sm text-taupe">Le radici, l'esperienza diretta sul cantiere</p>
+        <div className="relative">
+          <div className="absolute left-0 right-0 top-0 hidden h-px bg-taupe/30 md:block">
+            <div className="absolute inset-0 origin-left bg-cypress animate-[sp-line-grow_2s_ease_forwards]" />
           </div>
-          <div className="md:col-span-2 hidden md:block">
-            <div className="relative h-px w-full bg-taupe/30">
-              <div className="absolute inset-0 origin-left bg-cypress animate-[sp-line-grow_2s_ease_forwards]" />
+          <div className="grid gap-12 md:grid-cols-3 md:gap-10 md:pt-10">
+            <div>
+              <p className="eyebrow">2003</p>
+              <p className="mt-3 font-serif text-4xl md:text-5xl text-graphite">Officina artigiana</p>
+              <p className="mt-2 text-sm text-taupe">Le radici, l'esperienza diretta sul cantiere</p>
             </div>
-          </div>
-          <div className="md:col-span-5 md:text-right">
-            <p className="eyebrow">Oggi</p>
-            <p className="mt-3 font-serif text-5xl md:text-6xl text-graphite">Impresa tecnologica</p>
-            <p className="mt-2 text-sm text-taupe">Progettazione digitale, BIM, monitoraggio e sistemi integrati</p>
+            <div>
+              <p className="eyebrow">2025</p>
+              <p className="mt-3 font-serif text-4xl md:text-5xl text-graphite">Socio unico</p>
+              <p className="mt-2 text-sm text-taupe">
+                L'azienda diventa a socio unico rilevando le quote dei vecchi soci: una guida
+                sola, una visione sola, e un rilancio della società verso una crescita più
+                strutturata, tecnologica e di lungo periodo.
+              </p>
+            </div>
+            <div>
+              <p className="eyebrow">Oggi</p>
+              <p className="mt-3 font-serif text-4xl md:text-5xl text-graphite">Impresa tecnologica</p>
+              <p className="mt-2 text-sm text-taupe">Progettazione digitale, BIM, monitoraggio e sistemi integrati</p>
+            </div>
           </div>
         </div>
       </div>
+
     </section>
   );
 }
