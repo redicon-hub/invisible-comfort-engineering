@@ -205,7 +205,7 @@ const NAV = [
   { label: "Piscine", href: "#piscine" },
   { label: "Residenze", href: "#residenze" },
   { label: "Energie", href: "#energie" },
-  { label: "Progetti", href: "#progetti" },
+  { label: "Progetti", href: "/progetti" },
   { label: "Contatti", href: "#contatti" },
 ];
 
