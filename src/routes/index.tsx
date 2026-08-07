@@ -14,7 +14,8 @@ import poolChiantiAsset from "@/assets/piscina-casale-chianti.jpg.asset.json";
 const heroRetail = heroRetailAsset.url;
 import residence from "@/assets/residence.jpg";
 
-import finalCta from "@/assets/final-cta.jpg";
+import finalCtaAsset from "@/assets/contatti-piscina-casale.jpg.asset.json";
+const finalCta = finalCtaAsset.url;
 import portfolioHospitality from "@/assets/portfolio-hospitality.jpg";
 
 import realAtelier from "@/assets/atelier_alta_moda.jpg.asset.json";
@@ -949,7 +950,7 @@ function FinalCTA() {
   return (
     <section id="contatti" className="relative overflow-hidden bg-graphite text-lime">
       <div className="relative h-[70svh] min-h-[520px]">
-        <img src={finalCta} alt="Villa toscana con piscina al tramonto" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={finalCta} alt="Piscina a sfioro davanti a casale toscano in pietra" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-graphite via-graphite/60 to-transparent" />
         <div className="container-editorial relative z-10 flex h-full flex-col justify-end pb-16">
           <p className="eyebrow text-lime/70">Contatti</p>
@@ -1003,8 +1004,9 @@ function ContactForm() {
   };
 
   const field =
-    "w-full border-0 border-b border-lime/25 bg-transparent px-0 py-4 text-lime placeholder:text-lime/40 focus:border-lime focus:outline-none focus:ring-0 transition-colors";
-  const label = "block text-[11px] tracking-[0.2em] uppercase text-lime/60 mb-2";
+    "w-full rounded-xl border border-lime/15 bg-lime/[0.06] px-4 py-3.5 text-[0.95rem] text-lime placeholder:text-lime/35 backdrop-blur-sm outline-none transition-[background,border-color,box-shadow] duration-200 focus:border-lime/40 focus:bg-lime/[0.1] focus:shadow-[0_0_0_3px_color-mix(in_oklab,var(--lime)_10%,transparent)]";
+  const label = "block text-[11px] tracking-[0.2em] uppercase text-lime/55 mb-2";
+
 
   if (status === "sent") {
     return (
@@ -1019,15 +1021,11 @@ function ContactForm() {
   }
 
   return (
-    <form onSubmit={submit} className="container-editorial mt-16 grid gap-x-10 gap-y-8 md:grid-cols-2 max-w-4xl mx-auto" noValidate>
+    <form onSubmit={submit} className="container-editorial mt-14 grid gap-x-6 gap-y-5 md:grid-cols-2 max-w-3xl mx-auto" noValidate>
       <div>
         <label className={label} htmlFor="name">Nome e cognome</label>
         <input id="name" name="name" className={field} placeholder="Mario Rossi" />
         {err.name && <p className="mt-2 text-xs text-bronze">{err.name}</p>}
-      </div>
-      <div>
-        <label className={label} htmlFor="company">Azienda <span className="opacity-60">(facoltativo)</span></label>
-        <input id="company" name="company" className={field} placeholder="Studio / Impresa" />
       </div>
       <div>
         <label className={label} htmlFor="email">Email</label>
@@ -1045,10 +1043,7 @@ function ContactForm() {
           {PROJECT_TYPES.map((t) => <option key={t} value={t} className="bg-graphite">{t}</option>)}
         </select>
       </div>
-      <div>
-        <label className={label} htmlFor="location">Località del progetto</label>
-        <input id="location" name="location" className={field} placeholder="Città, Provincia" />
-      </div>
+
       <div className="md:col-span-2">
         <label className={label} htmlFor="message">Messaggio</label>
         <textarea id="message" name="message" rows={4} className={field} placeholder="Raccontaci il progetto…" />
