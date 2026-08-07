@@ -812,7 +812,7 @@ function Portfolio() {
           Progetti <em className="italic">costruiti per durare.</em>
         </h2>
         <p className="body-editorial mt-6">
-          Interventi reali tra impiantistica, retail, residenze, piscine ed energia.
+          Interventi reali tra impianti industriali, atelier moda, piscine e residenze private.
         </p>
       </div>
       <div className="container-editorial grid gap-4 md:grid-cols-12 md:auto-rows-[320px]">
