@@ -5,7 +5,9 @@ import heroPoolAsset from "@/assets/hero-piscina-toscana.jpg.asset.json";
 import poolSectionAsset from "@/assets/piscina-idromassaggio-panoramica.jpg.asset.json";
 
 const heroPool = heroPoolAsset.url;
-import heroIndustrial from "@/assets/hero-industrial.jpg";
+import heroIndustrialAsset from "@/assets/hero-industriale-arezzo.jpg.asset.json";
+
+const heroIndustrial = heroIndustrialAsset.url;
 import heroRetail from "@/assets/hero-retail.jpg";
 import residence from "@/assets/residence.jpg";
 import bathroomDetail from "@/assets/bathroom-detail.jpg";
