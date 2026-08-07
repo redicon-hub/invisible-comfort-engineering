@@ -218,10 +218,10 @@ function HeroSlider() {
 
 const NAV = [
   { label: "Azienda", href: "#azienda" },
-  { label: "Impianti", href: "#impianti" },
+  { label: "Industria", href: "#impianti" },
+  { label: "Atelier & Retail", href: "#retail" },
   { label: "Piscine", href: "#piscine" },
   { label: "Residenze", href: "#residenze" },
-  { label: "Energie", href: "#energie" },
   { label: "Progetti", href: "/progetti" },
   { label: "Contatti", href: "#contatti" },
 ];
