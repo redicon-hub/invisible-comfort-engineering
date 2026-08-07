@@ -1121,7 +1121,7 @@ function Footer() {
               { h: "Azienda", l: ["Chi siamo", "Il team", "Lavora con noi"] },
               { h: "Impianti", l: ["Commerciali", "Industriali", "Retail"] },
               { h: "Piscine", l: ["A sfioro", "Acqua salata", "Manutenzione"] },
-              { h: "Energie", l: ["Fotovoltaico", "Pompe di calore", "Geotermia"] },
+              { h: "Atelier & Retail", l: ["Boutique", "Showroom", "Atelier moda"] },
               { h: "Progetti", l: ["Portfolio", "Case study"] },
               { h: "Contatti", l: ["Scrivici", "Telefono", "WhatsApp"] },
             ].map((c) => (
