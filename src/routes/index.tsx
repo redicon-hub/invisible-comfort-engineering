@@ -9,6 +9,7 @@ import heroIndustrialAsset from "@/assets/hero-industriale-arezzo.jpg.asset.json
 
 const heroIndustrial = heroIndustrialAsset.url;
 import heroRetailAsset from "@/assets/hero-boutique-atelier.jpg.asset.json";
+import poolChiantiAsset from "@/assets/piscina-casale-chianti.jpg.asset.json";
 
 const heroRetail = heroRetailAsset.url;
 import residence from "@/assets/residence.jpg";
@@ -380,7 +381,7 @@ const WORLDS = [
     desc: "Piscine a sfioro, anche ad acqua salata, pensate per ville, casali e proprietà di alto pregio.",
     link: "Scopri le piscine",
     href: "#piscine",
-    image: heroPool,
+    image: poolChiantiAsset.url,
   },
   {
     cat: "Residenze & Hospitality",
