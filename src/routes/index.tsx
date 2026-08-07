@@ -373,10 +373,18 @@ const WORLDS = [
   {
     cat: "Industria & Business",
     title: "Impianti progettati per non fermarsi.",
-    desc: "Soluzioni meccaniche, idrauliche, climatiche e antincendio per aziende, attività produttive, contractor e spazi commerciali.",
+    desc: "Soluzioni meccaniche, idrauliche, climatiche e antincendio per aziende, attività produttive, contractor e logistica.",
     link: "Scopri gli impianti",
     href: "#impianti",
     image: impiantoProduttivo.url,
+  },
+  {
+    cat: "Atelier moda & Retail",
+    title: "Quando la tecnica deve sparire.",
+    desc: "Boutique, showroom e atelier: comfort silenzioso, cantieri a data fissa e impianti invisibili dentro il progetto architettonico.",
+    link: "Scopri retail e atelier",
+    href: "#retail",
+    image: heroRetail,
   },
   {
     cat: "Piscine & Landscape",
@@ -387,7 +395,7 @@ const WORLDS = [
     image: poolChiantiAsset.url,
   },
   {
-    cat: "Residenze & Hospitality",
+    cat: "Residenze private",
     title: "Il comfort di una proprietà straordinaria.",
     desc: "Impianti evoluti per ville, casali, agriturismi e case vacanza in tutta Italia.",
     link: "Scopri le residenze",
