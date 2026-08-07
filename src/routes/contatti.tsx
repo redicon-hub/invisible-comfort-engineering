@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MapPin, Mail, Phone, MessageCircle, ArrowLeft } from "lucide-react";
+import { MapPin, Mail, Phone, PhoneCall, MessageCircle, ArrowLeft } from "lucide-react";
 import { SiteFooter, CONTACTS } from "@/components/SiteFooter";
 
 export const Route = createFileRoute("/contatti")({
@@ -39,8 +39,14 @@ const CARDS = [
     href: `mailto:${CONTACTS.email}`,
   },
   {
+    icon: PhoneCall,
+    label: "Telefono fisso",
+    value: CONTACTS.landline,
+    href: CONTACTS.landlineHref,
+  },
+  {
     icon: Phone,
-    label: "Telefono",
+    label: "Cellulare",
     value: CONTACTS.phone,
     href: CONTACTS.phoneHref,
   },

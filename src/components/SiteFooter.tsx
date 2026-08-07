@@ -1,11 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Mail, Phone, MessageCircle } from "lucide-react";
+import { MapPin, Mail, Phone, PhoneCall, MessageCircle } from "lucide-react";
 
 export const CONTACTS = {
   address: "Via Renato Guttuso, 8 — 52021 Bucine (AR)",
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Via+Renato+Guttuso+8+52021+Bucine+AR",
   email: "info@ptermoidraulica.com",
+  landline: "055 995556",
+  landlineHref: "tel:+39055995556",
   phone: "339 859 7809",
   phoneHref: "tel:+393398597809",
   whatsapp: "345 17 05 602",
@@ -63,6 +65,12 @@ export function SiteFooter() {
                 <span className={iconBox}><Mail className="h-4 w-4" aria-hidden /></span>
                 <a href={`mailto:${CONTACTS.email}`} className="transition-colors hover:text-lime">
                   {CONTACTS.email}
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <span className={iconBox}><PhoneCall className="h-4 w-4" aria-hidden /></span>
+                <a href={CONTACTS.landlineHref} className="transition-colors hover:text-lime">
+                  {CONTACTS.landline}
                 </a>
               </li>
               <li className="flex gap-3">
