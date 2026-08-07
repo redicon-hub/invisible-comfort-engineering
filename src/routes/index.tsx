@@ -8,7 +8,9 @@ const heroPool = heroPoolAsset.url;
 import heroIndustrialAsset from "@/assets/hero-industriale-arezzo.jpg.asset.json";
 
 const heroIndustrial = heroIndustrialAsset.url;
-import heroRetail from "@/assets/hero-retail.jpg";
+import heroRetailAsset from "@/assets/hero-boutique-atelier.jpg.asset.json";
+
+const heroRetail = heroRetailAsset.url;
 import residence from "@/assets/residence.jpg";
 import bathroomDetail from "@/assets/bathroom-detail.jpg";
 import energy from "@/assets/energy.jpg";
@@ -133,7 +135,14 @@ function HeroSlider() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(180deg, rgba(37,36,34,0.35) 0%, rgba(37,36,34,0.15) 30%, rgba(37,36,34,0.65) 100%)",
+                "linear-gradient(180deg, rgba(37,36,34,0.30) 0%, rgba(37,36,34,0.12) 30%, rgba(37,36,34,0.70) 100%)",
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(37,36,34,0.78) 0%, rgba(37,36,34,0.55) 35%, rgba(37,36,34,0.18) 65%, rgba(37,36,34,0) 100%)",
             }}
           />
         </div>
