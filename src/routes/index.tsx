@@ -403,7 +403,6 @@ const WORLDS = [
 ];
 
 function BusinessWorlds() {
-  const [active, setActive] = useState(0);
   return (
     <section className="bg-lime py-28 md:py-40">
       <div className="container-editorial mb-16 md:mb-20 max-w-3xl">
@@ -416,77 +415,35 @@ function BusinessWorlds() {
         </p>
       </div>
 
-      <div className="container-editorial grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:gap-16">
-        {/* elenco editoriale */}
-        <div className="border-t border-graphite/15">
-          {WORLDS.map((w, idx) => {
-            const isActive = active === idx;
-            return (
-              <a
-                key={idx}
-                href={w.href}
-                onMouseEnter={() => setActive(idx)}
-                onFocus={() => setActive(idx)}
-                className="group block border-b border-graphite/15 py-8 md:py-10"
-              >
-                <div className="grid grid-cols-[auto_minmax(0,1fr)] gap-5 md:gap-8">
-                  <span
-                    className={`pt-1 text-xs font-medium tracking-[0.24em] transition-colors duration-300 ${
-                      isActive ? "text-graphite" : "text-graphite/40"
-                    }`}
-                  >
-                    0{idx + 1}
-                  </span>
-                  <div className="min-w-0">
-                    <p className="eyebrow text-graphite/60">{w.cat}</p>
-                    <h3 className="display-md mt-3 text-graphite">{w.title}</h3>
-                    <p className="mt-4 max-w-xl text-sm leading-relaxed text-graphite/70">
-                      {w.desc}
-                    </p>
-
-                    {/* anteprima immagine solo mobile/tablet */}
-                    <div className="mt-6 overflow-hidden lg:hidden">
-                      <img
-                        src={w.image}
-                        alt={w.title}
-                        loading="lazy"
-                        className="h-56 w-full object-cover sm:h-72"
-                      />
-                    </div>
-
-                    <span className="mt-6 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-graphite">
-                      {w.link}
-                      <span
-                        aria-hidden
-                        className="transition-transform duration-300 group-hover:translate-x-1"
-                      >
-                        →
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            );
-          })}
-        </div>
-
-        {/* preview sticky desktop */}
-        <div className="hidden lg:block">
-          <div className="sticky top-28 h-[70svh] overflow-hidden">
-            {WORLDS.map((w, idx) => (
+      <div className="container-editorial grid gap-8 md:grid-cols-2 md:gap-x-10 md:gap-y-14">
+        {WORLDS.map((w, idx) => (
+          <a key={idx} href={w.href} className="group block">
+            <div className="relative overflow-hidden">
               <img
-                key={idx}
                 src={w.image}
                 alt={w.title}
                 loading="lazy"
-                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-                  active === idx ? "opacity-100" : "opacity-0"
-                }`}
+                className="h-[46svh] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04] md:h-[52svh]"
               />
-            ))}
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-graphite/40 to-transparent" />
-          </div>
-        </div>
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-graphite/35 to-transparent" />
+              <span className="absolute left-6 top-6 text-xs font-medium tracking-[0.24em] text-lime">
+                0{idx + 1}
+              </span>
+            </div>
+
+            <div className="mt-6 max-w-xl">
+              <p className="eyebrow text-graphite/60">{w.cat}</p>
+              <h3 className="display-md mt-3 text-graphite">{w.title}</h3>
+              <p className="mt-4 text-sm leading-relaxed text-graphite/70">{w.desc}</p>
+              <span className="mt-6 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-graphite">
+                {w.link}
+                <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </span>
+            </div>
+          </a>
+        ))}
       </div>
     </section>
   );
