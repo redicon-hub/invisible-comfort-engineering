@@ -643,45 +643,25 @@ function ResidencesFeature() {
   );
 }
 
-/* ---------------- ENERGY ---------------- */
+/* ---------------- ENERGY LINE ---------------- */
 
-function EnergyFeature() {
-  const items = ["Fotovoltaico", "Solare termico", "Pompe di calore", "Geotermia"];
+function EnergyLine() {
   return (
-    <section id="energie" className="bg-ivory py-28 md:py-40">
-      <div className="container-editorial grid gap-16 md:grid-cols-12">
-        <div className="md:col-span-6">
-          <p className="eyebrow">Energia integrata</p>
-          <h2 className="display-section mt-6 text-graphite">
-            L'energia non è un impianto separato. <em className="italic">È parte del progetto.</em>
-          </h2>
-          <p className="body-editorial mt-8">
-            Fotovoltaico, solare termico, pompe di calore, geotermia e sistemi di gestione
-            energetica devono dialogare con l'edificio e con le sue reali esigenze.
-          </p>
-          <p className="body-editorial mt-4">
-            SP Termoidraulica sviluppa soluzioni integrate per ridurre consumi, migliorare il
-            comfort e rendere più efficiente l'intero sistema.
-          </p>
-          <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-6">
-            {items.map((it, idx) => (
-              <div key={it} className="border-t border-taupe/30 pt-4">
-                <span className="text-xs font-mono text-taupe">0{idx + 1}</span>
-                <p className="mt-2 font-serif text-2xl text-graphite">{it}</p>
-              </div>
-            ))}
-          </div>
-          <a href="#contatti" className="btn-ghost mt-12 text-graphite">Scopri le soluzioni energetiche</a>
-        </div>
-        <div className="md:col-span-6">
-          <div className="relative aspect-[4/5] overflow-hidden">
-            <img src={energy} alt="Fotovoltaico integrato" loading="lazy" className="h-full w-full object-cover" />
-          </div>
-        </div>
+    <section className="bg-ivory py-20 md:py-28">
+      <div className="container-editorial max-w-4xl text-center">
+        <p className="eyebrow">Competenza trasversale</p>
+        <h2 className="display-md mt-6 text-graphite">
+          L'energia non è un impianto separato. <em className="italic">È parte del progetto.</em>
+        </h2>
+        <p className="body-editorial mt-6">
+          Pompe di calore, gestione energetica e recupero termico vengono progettati dentro ciascuna
+          delle quattro aree di intervento, non come capitolo a parte.
+        </p>
       </div>
     </section>
   );
 }
+
 
 /* ---------------- METHOD TIMELINE ---------------- */
 
