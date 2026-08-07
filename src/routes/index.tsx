@@ -242,7 +242,7 @@ function Header() {
               href="#contatti"
               className="btn-primary hidden md:inline-flex"
             >
-              Parliamo del tuo progetto <span aria-hidden>→</span>
+              Contattaci <span aria-hidden>→</span>
             </a>
             <button
               onClick={() => setOpen(true)}
