@@ -1,12 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 
-import heroPool from "@/assets/hero-pool.jpg";
+import heroPoolAsset from "@/assets/hero-piscina-toscana.jpg.asset.json";
+import poolSectionAsset from "@/assets/piscina-idromassaggio-panoramica.jpg.asset.json";
+
+const heroPool = heroPoolAsset.url;
 import heroIndustrial from "@/assets/hero-industrial.jpg";
 import heroRetail from "@/assets/hero-retail.jpg";
 import residence from "@/assets/residence.jpg";
 import bathroomDetail from "@/assets/bathroom-detail.jpg";
-import poolLandscape from "@/assets/pool-landscape.jpg";
 import energy from "@/assets/energy.jpg";
 import finalCta from "@/assets/final-cta.jpg";
 import portfolioHospitality from "@/assets/portfolio-hospitality.jpg";
@@ -439,8 +441,9 @@ function PoolFeature() {
       <div className="grid md:grid-cols-2">
         <div className="relative h-[70svh] md:h-[110svh] md:sticky md:top-0">
           <img
-            src={poolLandscape}
-            alt="Piscina a sfioro integrata nel paesaggio toscano"
+            src={poolSectionAsset.url}
+            alt="Piscina interna con idromassaggio e vista panoramica sulle colline toscane"
+
             loading="lazy"
             className="h-full w-full object-cover"
           />
