@@ -1169,11 +1169,10 @@ function HomePage() {
         <HeroSlider />
         <Manifesto />
         <BusinessWorlds />
-        <PoolFeature />
         <IndustrialFeature />
         <RetailFeature />
+        <PoolFeature />
         <ResidencesFeature />
-        <EnergyFeature />
         <MethodTimeline />
         <Portfolio />
         <Numbers />
