@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 
@@ -340,6 +340,9 @@ function Manifesto() {
           <a href="#azienda" className="link-underline link-underline-hover text-graphite">
             Conosci l'azienda <span aria-hidden>→</span>
           </a>
+          <div className="pt-2">
+            <ProjectsCTA label="Sfoglia tutti i progetti" />
+          </div>
         </div>
       </div>
 
@@ -364,6 +367,31 @@ function Manifesto() {
         </div>
       </div>
     </section>
+  );
+}
+
+
+/* ---------------- PROJECTS CTA ---------------- */
+
+function ProjectsCTA({
+  label = "Vedi i progetti",
+  hash,
+  tone = "dark",
+  className = "",
+}: {
+  label?: string;
+  hash?: string;
+  tone?: "dark" | "light";
+  className?: string;
+}) {
+  return (
+    <Link
+      to="/progetti"
+      hash={hash}
+      className={`btn-ghost ${tone === "light" ? "text-lime" : "text-graphite"} ${className}`}
+    >
+      {label} <span aria-hidden>→</span>
+    </Link>
   );
 }
 
@@ -447,6 +475,10 @@ function BusinessWorlds() {
           </a>
         ))}
       </div>
+
+      <div className="container-editorial mt-14">
+        <ProjectsCTA label="Vedi tutte le realizzazioni" />
+      </div>
     </section>
   );
 }
@@ -500,7 +532,7 @@ function PoolFeature() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="#contatti" className="btn-primary">Progetta la tua piscina <span aria-hidden>→</span></a>
-            <a href="#progetti" className="btn-ghost text-graphite">Guarda le realizzazioni</a>
+            <ProjectsCTA label="Guarda le piscine realizzate" hash="piscine" />
           </div>
         </div>
       </div>
@@ -537,9 +569,12 @@ function IndustrialFeature() {
             contractor nella realizzazione di impianti affidabili, coordinati e pronti a
             sostenere le esigenze operative del progetto.
           </p>
-          <a href="#contatti" className="btn-ghost mt-10 text-lime">
-            Parla con il reparto tecnico
-          </a>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a href="#contatti" className="btn-ghost text-lime">
+              Parla con il reparto tecnico
+            </a>
+            <ProjectsCTA label="Impianti realizzati" hash="industriale" tone="light" />
+          </div>
         </div>
         <div className="md:col-span-7">
           <div className="relative aspect-[4/3] overflow-hidden">
@@ -595,6 +630,9 @@ function RetailFeature() {
           <p className="mt-6 text-sm text-taupe">
             Impianti per negozi, boutique, showroom e spazi commerciali.
           </p>
+          <div className="mt-8">
+            <ProjectsCTA label="Atelier e retail realizzati" hash="atelier" />
+          </div>
         </div>
       </div>
     </section>
@@ -638,7 +676,10 @@ function ResidencesFeature() {
             <p className="mt-8 font-serif text-2xl italic text-cypress">
               Un'abitudine al viaggio costruita seguendo i progetti dei nostri clienti.
             </p>
-            <a href="#contatti" className="btn-primary mt-10">Soluzioni per residenze <span aria-hidden>→</span></a>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a href="#contatti" className="btn-primary">Soluzioni per residenze <span aria-hidden>→</span></a>
+              <ProjectsCTA label="Residenze realizzate" hash="residenze" />
+            </div>
           </div>
         </div>
       </div>
@@ -940,6 +981,9 @@ function Numbers() {
             <p className="mt-4 text-sm text-taupe max-w-xs">{s.small}</p>
           </div>
         ))}
+      </div>
+      <div className="container-editorial mt-14">
+        <ProjectsCTA label="Guarda i progetti" />
       </div>
     </section>
   );
