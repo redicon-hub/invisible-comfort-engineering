@@ -24,6 +24,8 @@ import realIndustrial from "@/assets/impianti_industriali.jpg.asset.json";
 import realPoolStone from "@/assets/piscine_private.jpg.asset.json";
 import realPoolIndoor from "@/assets/pisc_ina_privata.jpg.asset.json";
 import realResidence from "@/assets/residenza_privata.jpg.asset.json";
+import residenzaCasale from "@/assets/residenza-casale-vasca.jpg.asset.json";
+import residenzaBagno from "@/assets/residenza-bagno-travertino.jpg.asset.json";
 import realPv from "@/assets/fotovoltaico.jpg.asset.json";
 import realRetail from "@/assets/shoroom_moda.jpg.asset.json";
 
