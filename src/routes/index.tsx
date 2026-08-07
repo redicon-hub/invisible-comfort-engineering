@@ -11,6 +11,13 @@ import energy from "@/assets/energy.jpg";
 import finalCta from "@/assets/final-cta.jpg";
 import portfolioHospitality from "@/assets/portfolio-hospitality.jpg";
 import portfolioPlant from "@/assets/portfolio-plant.jpg";
+import realPoolChianti from "@/assets/piscina_privata_toscana.jpg.asset.json";
+import realIndustrial from "@/assets/impianti_industriali.jpg.asset.json";
+import realPoolStone from "@/assets/piscine_private.jpg.asset.json";
+import realPoolIndoor from "@/assets/pisc_ina_privata.jpg.asset.json";
+import realResidence from "@/assets/residenza_privata.jpg.asset.json";
+import realPv from "@/assets/fotovoltaico.jpg.asset.json";
+import realRetail from "@/assets/shoroom_moda.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -718,12 +725,62 @@ function MethodTimeline() {
 /* ---------------- PORTFOLIO ---------------- */
 
 const PORTFOLIO = [
-  { image: heroPool, cat: "Piscine", loc: "Chianti, Toscana", title: "Piscina a sfioro in casale toscano", span: "md:col-span-8 md:row-span-2" },
-  { image: heroRetail, cat: "Retail", loc: "Milano", title: "Impianti per boutique di moda", span: "md:col-span-4" },
-  { image: portfolioPlant, cat: "Industria", loc: "Arezzo", title: "Impianto industriale", span: "md:col-span-4" },
-  { image: portfolioHospitality, cat: "Hospitality", loc: "Val d'Orcia", title: "Impianto idrotermosanitario per struttura ricettiva", span: "md:col-span-5" },
-  { image: residence, cat: "Residenze", loc: "Toscana", title: "Residenza privata", span: "md:col-span-4" },
-  { image: energy, cat: "Energia", loc: "Bucine, AR", title: "Sistema fotovoltaico integrato", span: "md:col-span-3" },
+  {
+    image: realPoolChianti.url,
+    cat: "Piscine",
+    loc: "Chianti, Toscana",
+    title: "Piscina a sfioro su giardino panoramico",
+    note: "Vasca a sfioro con bordo in pietra, trattamento acqua e filtrazione silenziosa integrata nel paesaggio.",
+    span: "md:col-span-8 md:row-span-2",
+  },
+  {
+    image: realRetail.url,
+    cat: "Retail",
+    loc: "Boutique moda",
+    title: "Clima e comfort per spazi di lusso",
+    note: "Climatizzazione invisibile e distribuzione aria calibrata per non interferire con luce e materiali.",
+    span: "md:col-span-4",
+  },
+  {
+    image: realIndustrial.url,
+    cat: "Impianti",
+    loc: "Edificio produttivo",
+    title: "Unità di trattamento aria in copertura",
+    note: "Staffaggi, canalizzazioni coibentate e UTA esterna: impianto dimensionato sui carichi reali.",
+    span: "md:col-span-4",
+  },
+  {
+    image: realPoolStone.url,
+    cat: "Piscine",
+    loc: "Casale toscano",
+    title: "Vasca in pietra con pool house",
+    note: "Ricircolo, riscaldamento acqua e locale tecnico dedicato, nascosto dentro l'architettura esistente.",
+    span: "md:col-span-4",
+  },
+  {
+    image: realPoolIndoor.url,
+    cat: "Wellness",
+    loc: "Val d'Orcia",
+    title: "Vasca idromassaggio indoor-outdoor",
+    note: "Idromassaggio a filo pavimento, controllo temperatura e trattamento acqua per uso continuo.",
+    span: "md:col-span-4",
+  },
+  {
+    image: realResidence.url,
+    cat: "Residenze",
+    loc: "Residenza privata",
+    title: "Bagno in marmo con dettaglio sanitario",
+    note: "Adduzione, scarichi e miscelazione incassati al millimetro dietro lastre in marmo continue.",
+    span: "md:col-span-6",
+  },
+  {
+    image: realPv.url,
+    cat: "Energia",
+    loc: "Copertura industriale",
+    title: "Campo fotovoltaico su tetto piano",
+    note: "Struttura zavorrata, cavidotti ordinati e integrazione con pompe di calore per autoconsumo.",
+    span: "md:col-span-6",
+  },
 ];
 
 function Portfolio() {
@@ -735,7 +792,7 @@ function Portfolio() {
           Progetti <em className="italic">costruiti per durare.</em>
         </h2>
         <p className="body-editorial mt-6">
-          Una selezione di interventi tra impiantistica, retail, residenze, piscine ed energia.
+          Interventi reali tra impiantistica, retail, residenze, piscine ed energia.
         </p>
       </div>
       <div className="container-editorial grid gap-4 md:grid-cols-12 md:auto-rows-[320px]">
@@ -760,6 +817,7 @@ function Portfolio() {
                 <span>{p.loc}</span>
               </div>
               <h3 className="mt-3 font-serif text-xl md:text-2xl">{p.title}</h3>
+              <p className="mt-2 max-w-md text-sm leading-relaxed text-lime/75">{p.note}</p>
               <span className="mt-4 inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Apri il progetto <span aria-hidden>→</span>
               </span>
