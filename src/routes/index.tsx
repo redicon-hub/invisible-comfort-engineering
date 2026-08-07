@@ -14,7 +14,6 @@ import poolChiantiAsset from "@/assets/piscina-casale-chianti.jpg.asset.json";
 const heroRetail = heroRetailAsset.url;
 import residence from "@/assets/residence.jpg";
 
-import energy from "@/assets/energy.jpg";
 import finalCta from "@/assets/final-cta.jpg";
 import portfolioHospitality from "@/assets/portfolio-hospitality.jpg";
 
@@ -27,7 +26,6 @@ import realResidence from "@/assets/residenza_privata.jpg.asset.json";
 import residenzaCasale from "@/assets/residenza-casale-vasca.jpg.asset.json";
 import impiantoProduttivo from "@/assets/impianto-produttivo-aria-compressa.jpg.asset.json";
 import residenzaBagno from "@/assets/residenza-bagno-travertino.jpg.asset.json";
-import realPv from "@/assets/fotovoltaico.jpg.asset.json";
 import realRetail from "@/assets/shoroom_moda.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
