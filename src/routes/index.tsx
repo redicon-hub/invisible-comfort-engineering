@@ -799,15 +799,7 @@ const PORTFOLIO = [
     loc: "Residenza privata",
     title: "Bagno in marmo con dettaglio sanitario",
     note: "Adduzione, scarichi e miscelazione incassati al millimetro dietro lastre in marmo continue.",
-    span: "md:col-span-6",
-  },
-  {
-    image: realPv.url,
-    cat: "Energia",
-    loc: "Copertura industriale",
-    title: "Campo fotovoltaico su tetto piano",
-    note: "Struttura zavorrata, cavidotti ordinati e integrazione con pompe di calore per autoconsumo.",
-    span: "md:col-span-6",
+    span: "md:col-span-12",
   },
 ];
 
