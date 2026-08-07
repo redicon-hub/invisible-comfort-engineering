@@ -794,6 +794,26 @@ const PORTFOLIO = [
 ];
 
 function Portfolio() {
+  const [open, setOpen] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (open === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(null);
+      if (e.key === "ArrowRight") setOpen((v) => (v === null ? v : (v + 1) % PORTFOLIO.length));
+      if (e.key === "ArrowLeft") setOpen((v) => (v === null ? v : (v - 1 + PORTFOLIO.length) % PORTFOLIO.length));
+    };
+    document.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
+
+  const current = open === null ? null : PORTFOLIO[open];
+
   return (
     <section id="progetti" className="bg-ivory py-28 md:py-40">
       <div className="container-editorial mb-16 max-w-3xl">
@@ -807,10 +827,12 @@ function Portfolio() {
       </div>
       <div className="container-editorial grid gap-4 md:grid-cols-12 md:auto-rows-[320px]">
         {PORTFOLIO.map((p, i) => (
-          <a
+          <button
             key={i}
-            href="#contatti"
-            className={`group relative col-span-12 overflow-hidden ${p.span}`}
+            type="button"
+            onClick={() => setOpen(i)}
+            aria-label={`Ingrandisci: ${p.title}`}
+            className={`group relative col-span-12 overflow-hidden text-left cursor-zoom-in ${p.span}`}
             style={{ minHeight: 320 }}
           >
             <img
@@ -830,19 +852,73 @@ function Portfolio() {
               <h3 className="mt-3 font-serif text-xl md:text-2xl">{p.title}</h3>
               <p className="mt-2 max-w-md text-sm leading-relaxed text-lime/90">{p.note}</p>
               <span className="mt-4 inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                Apri il progetto <span aria-hidden>→</span>
+                Ingrandisci <span aria-hidden>↗</span>
               </span>
             </div>
-
-          </a>
+          </button>
         ))}
       </div>
       <div className="container-editorial mt-16 text-center">
-        <a href="#contatti" className="btn-ghost text-graphite">Vedi tutti i progetti</a>
+        <a href="#contatti" className="btn-ghost text-graphite">Parliamo del tuo progetto</a>
       </div>
+
+      {current && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={current.title}
+          onClick={() => setOpen(null)}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-graphite/92 backdrop-blur-sm p-4 md:p-10"
+        >
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setOpen(null); }}
+            aria-label="Chiudi"
+            className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-lime/25 text-lime text-xl hover:bg-lime/10 transition-colors"
+          >
+            ×
+          </button>
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setOpen((v) => (v === null ? v : (v - 1 + PORTFOLIO.length) % PORTFOLIO.length)); }}
+            aria-label="Precedente"
+            className="absolute left-3 md:left-6 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-lime/25 text-lime hover:bg-lime/10 transition-colors"
+          >
+            ←
+          </button>
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setOpen((v) => (v === null ? v : (v + 1) % PORTFOLIO.length)); }}
+            aria-label="Successivo"
+            className="absolute right-3 md:right-6 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-lime/25 text-lime hover:bg-lime/10 transition-colors"
+          >
+            →
+          </button>
+          <figure
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-full w-full max-w-5xl overflow-auto"
+          >
+            <img
+              src={current.image}
+              alt={current.title}
+              className="mx-auto max-h-[72vh] w-auto max-w-full object-contain"
+            />
+            <figcaption className="mx-auto mt-5 max-w-2xl text-center text-lime">
+              <div className="flex items-center justify-center gap-3 text-xs uppercase tracking-[0.2em] text-lime/70">
+                <span>{current.cat}</span>
+                <span className="h-px w-6 bg-lime/40" />
+                <span>{current.loc}</span>
+              </div>
+              <h3 className="mt-3 font-serif text-2xl">{current.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-lime/75">{current.note}</p>
+            </figcaption>
+          </figure>
+        </div>
+      )}
     </section>
   );
 }
+
 
 /* ---------------- NUMBERS ---------------- */
 
