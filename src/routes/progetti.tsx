@@ -5,17 +5,17 @@ import { PROGETTI } from "@/data/progetti";
 export const Route = createFileRoute("/progetti")({
   head: () => ({
     meta: [
-      { title: "Progetti | SP Termoidraulica — impianti, piscine, industria" },
+      { title: "Progetti | SP Termoidraulica — industria, retail, piscine, residenze" },
       {
         name: "description",
         content:
-          "Le realizzazioni SP Termoidraulica: residenze private, piscine su misura e infrastrutture industriali e commerciali in Toscana e in Italia.",
+          "Le realizzazioni SP Termoidraulica: impianti industriali e commerciali, atelier moda e retail, piscine su misura e residenze private in Toscana e in Italia.",
       },
       { property: "og:title", content: "Progetti | SP Termoidraulica" },
       {
         property: "og:description",
         content:
-          "Residenze private, piscine e infrastrutture industriali: l'ingegneria invisibile del comfort in oltre sessanta realizzazioni.",
+          "Industria, atelier moda, piscine e residenze private: l'ingegneria invisibile del comfort in oltre sessanta realizzazioni.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -35,28 +35,36 @@ type Area = {
 
 const AREAS: Area[] = [
   {
-    id: "residenze",
-    eyebrow: "01 — Abitare",
-    title: "Residenze private",
-    lead: "Ville, casali e appartamenti dove riscaldamento radiante, trattamento aria e sanitari di pregio scompaiono dentro l'architettura.",
-    caption: "Residenza privata · impianto idrotermosanitario",
-    images: PROGETTI.residenze,
+    id: "industriale",
+    eyebrow: "01 — Produrre",
+    title: "Impianti industriali e commerciali",
+    lead: "Centrali termiche, climatizzazione, ventilazione meccanica e reti di distribuzione per stabilimenti, logistica e spazi di lavoro.",
+    caption: "Impianto industriale e commerciale · climatizzazione e distribuzione",
+    images: PROGETTI.industriale,
+  },
+  {
+    id: "atelier",
+    eyebrow: "02 — Vendere",
+    title: "Atelier moda e retail",
+    lead: "Boutique, showroom e atelier dove l'impianto sparisce dentro l'architettura: comfort silenzioso, continuità e cantieri a data fissa.",
+    caption: "Atelier e retail · climatizzazione integrata e impianti a vista zero",
+    images: PROGETTI.atelier,
   },
   {
     id: "piscine",
-    eyebrow: "02 — Acqua",
+    eyebrow: "03 — Acqua",
     title: "Piscine",
     lead: "Vasche a sfioro, infinity e idromassaggi: strutture, filtrazione, trattamento e riscaldamento acqua progettati e realizzati internamente.",
     caption: "Piscina su misura · struttura, filtrazione e trattamento acqua",
     images: PROGETTI.piscine,
   },
   {
-    id: "industriale",
-    eyebrow: "03 — Produrre",
-    title: "Infrastrutture industriali e commerciali",
-    lead: "Centrali termiche, climatizzazione, ventilazione meccanica e fotovoltaico per stabilimenti, logistica, retail e spazi di lavoro.",
-    caption: "Impianto industriale e commerciale · climatizzazione e distribuzione",
-    images: PROGETTI.industriale,
+    id: "residenze",
+    eyebrow: "04 — Abitare",
+    title: "Residenze private",
+    lead: "Ville, casali e appartamenti dove riscaldamento radiante, trattamento aria e sanitari di pregio scompaiono dentro l'architettura.",
+    caption: "Residenza privata · impianto idrotermosanitario",
+    images: PROGETTI.residenze,
   },
 ];
 

@@ -14,7 +14,6 @@ import poolChiantiAsset from "@/assets/piscina-casale-chianti.jpg.asset.json";
 const heroRetail = heroRetailAsset.url;
 import residence from "@/assets/residence.jpg";
 
-import energy from "@/assets/energy.jpg";
 import finalCta from "@/assets/final-cta.jpg";
 import portfolioHospitality from "@/assets/portfolio-hospitality.jpg";
 
@@ -27,7 +26,6 @@ import realResidence from "@/assets/residenza_privata.jpg.asset.json";
 import residenzaCasale from "@/assets/residenza-casale-vasca.jpg.asset.json";
 import impiantoProduttivo from "@/assets/impianto-produttivo-aria-compressa.jpg.asset.json";
 import residenzaBagno from "@/assets/residenza-bagno-travertino.jpg.asset.json";
-import realPv from "@/assets/fotovoltaico.jpg.asset.json";
 import realRetail from "@/assets/shoroom_moda.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -218,10 +216,10 @@ function HeroSlider() {
 
 const NAV = [
   { label: "Azienda", href: "#azienda" },
-  { label: "Impianti", href: "#impianti" },
+  { label: "Industria", href: "#impianti" },
+  { label: "Atelier & Retail", href: "#retail" },
   { label: "Piscine", href: "#piscine" },
   { label: "Residenze", href: "#residenze" },
-  { label: "Energie", href: "#energie" },
   { label: "Progetti", href: "/progetti" },
   { label: "Contatti", href: "#contatti" },
 ];
@@ -373,10 +371,18 @@ const WORLDS = [
   {
     cat: "Industria & Business",
     title: "Impianti progettati per non fermarsi.",
-    desc: "Soluzioni meccaniche, idrauliche, climatiche e antincendio per aziende, attività produttive, contractor e spazi commerciali.",
+    desc: "Soluzioni meccaniche, idrauliche, climatiche e antincendio per aziende, attività produttive, contractor e logistica.",
     link: "Scopri gli impianti",
     href: "#impianti",
     image: impiantoProduttivo.url,
+  },
+  {
+    cat: "Atelier moda & Retail",
+    title: "Quando la tecnica deve sparire.",
+    desc: "Boutique, showroom e atelier: comfort silenzioso, cantieri a data fissa e impianti invisibili dentro il progetto architettonico.",
+    link: "Scopri retail e atelier",
+    href: "#retail",
+    image: heroRetail,
   },
   {
     cat: "Piscine & Landscape",
@@ -387,7 +393,7 @@ const WORLDS = [
     image: poolChiantiAsset.url,
   },
   {
-    cat: "Residenze & Hospitality",
+    cat: "Residenze private",
     title: "Il comfort di una proprietà straordinaria.",
     desc: "Impianti evoluti per ville, casali, agriturismi e case vacanza in tutta Italia.",
     link: "Scopri le residenze",
@@ -401,15 +407,15 @@ function BusinessWorlds() {
   return (
     <section className="bg-lime py-28 md:py-40">
       <div className="container-editorial mb-16 md:mb-20 max-w-3xl">
-        <p className="eyebrow">Tre mondi</p>
+        <p className="eyebrow">Quattro aree di intervento</p>
         <h2 className="display-section mt-6 text-graphite">
-          Tre mondi. <em className="italic">Un solo standard.</em>
+          Quattro mondi. <em className="italic">Un solo standard.</em>
         </h2>
         <p className="body-editorial mt-6">
           Precisione tecnica, cura estetica e responsabilità operativa accompagnano ogni progetto.
         </p>
       </div>
-      <div className="container-editorial grid gap-4 md:grid-cols-3 md:gap-3">
+      <div className="container-editorial grid gap-4 md:grid-cols-2 md:gap-3 lg:grid-cols-4">
         {WORLDS.map((w, idx) => (
           <button
             key={idx}
@@ -643,45 +649,25 @@ function ResidencesFeature() {
   );
 }
 
-/* ---------------- ENERGY ---------------- */
+/* ---------------- ENERGY LINE ---------------- */
 
-function EnergyFeature() {
-  const items = ["Fotovoltaico", "Solare termico", "Pompe di calore", "Geotermia"];
+function EnergyLine() {
   return (
-    <section id="energie" className="bg-ivory py-28 md:py-40">
-      <div className="container-editorial grid gap-16 md:grid-cols-12">
-        <div className="md:col-span-6">
-          <p className="eyebrow">Energia integrata</p>
-          <h2 className="display-section mt-6 text-graphite">
-            L'energia non è un impianto separato. <em className="italic">È parte del progetto.</em>
-          </h2>
-          <p className="body-editorial mt-8">
-            Fotovoltaico, solare termico, pompe di calore, geotermia e sistemi di gestione
-            energetica devono dialogare con l'edificio e con le sue reali esigenze.
-          </p>
-          <p className="body-editorial mt-4">
-            SP Termoidraulica sviluppa soluzioni integrate per ridurre consumi, migliorare il
-            comfort e rendere più efficiente l'intero sistema.
-          </p>
-          <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-6">
-            {items.map((it, idx) => (
-              <div key={it} className="border-t border-taupe/30 pt-4">
-                <span className="text-xs font-mono text-taupe">0{idx + 1}</span>
-                <p className="mt-2 font-serif text-2xl text-graphite">{it}</p>
-              </div>
-            ))}
-          </div>
-          <a href="#contatti" className="btn-ghost mt-12 text-graphite">Scopri le soluzioni energetiche</a>
-        </div>
-        <div className="md:col-span-6">
-          <div className="relative aspect-[4/5] overflow-hidden">
-            <img src={energy} alt="Fotovoltaico integrato" loading="lazy" className="h-full w-full object-cover" />
-          </div>
-        </div>
+    <section className="bg-ivory py-20 md:py-28">
+      <div className="container-editorial max-w-4xl text-center">
+        <p className="eyebrow">Competenza trasversale</p>
+        <h2 className="display-md mt-6 text-graphite">
+          L'energia non è un impianto separato. <em className="italic">È parte del progetto.</em>
+        </h2>
+        <p className="body-editorial mt-6">
+          Pompe di calore, gestione energetica e recupero termico vengono progettati dentro ciascuna
+          delle quattro aree di intervento, non come capitolo a parte.
+        </p>
       </div>
     </section>
   );
 }
+
 
 /* ---------------- METHOD TIMELINE ---------------- */
 
@@ -799,15 +785,7 @@ const PORTFOLIO = [
     loc: "Residenza privata",
     title: "Bagno in marmo con dettaglio sanitario",
     note: "Adduzione, scarichi e miscelazione incassati al millimetro dietro lastre in marmo continue.",
-    span: "md:col-span-6",
-  },
-  {
-    image: realPv.url,
-    cat: "Energia",
-    loc: "Copertura industriale",
-    title: "Campo fotovoltaico su tetto piano",
-    note: "Struttura zavorrata, cavidotti ordinati e integrazione con pompe di calore per autoconsumo.",
-    span: "md:col-span-6",
+    span: "md:col-span-12",
   },
 ];
 
@@ -840,7 +818,7 @@ function Portfolio() {
           Progetti <em className="italic">costruiti per durare.</em>
         </h2>
         <p className="body-editorial mt-6">
-          Interventi reali tra impiantistica, retail, residenze, piscine ed energia.
+          Interventi reali tra impianti industriali, atelier moda, piscine e residenze private.
         </p>
       </div>
       <div className="container-editorial grid gap-4 md:grid-cols-12 md:auto-rows-[320px]">
@@ -1004,7 +982,7 @@ const PROJECT_TYPES = [
   "Boutique o spazio retail",
   "Villa o residenza",
   "Piscina",
-  "Fotovoltaico ed energia",
+  "Atelier moda",
   "Manutenzione",
   "Altro",
 ];
@@ -1121,7 +1099,7 @@ function Footer() {
               { h: "Azienda", l: ["Chi siamo", "Il team", "Lavora con noi"] },
               { h: "Impianti", l: ["Commerciali", "Industriali", "Retail"] },
               { h: "Piscine", l: ["A sfioro", "Acqua salata", "Manutenzione"] },
-              { h: "Energie", l: ["Fotovoltaico", "Pompe di calore", "Geotermia"] },
+              { h: "Atelier & Retail", l: ["Boutique", "Showroom", "Atelier moda"] },
               { h: "Progetti", l: ["Portfolio", "Case study"] },
               { h: "Contatti", l: ["Scrivici", "Telefono", "WhatsApp"] },
             ].map((c) => (
@@ -1169,11 +1147,11 @@ function HomePage() {
         <HeroSlider />
         <Manifesto />
         <BusinessWorlds />
-        <PoolFeature />
         <IndustrialFeature />
         <RetailFeature />
+        <PoolFeature />
         <ResidencesFeature />
-        <EnergyFeature />
+        <EnergyLine />
         <MethodTimeline />
         <Portfolio />
         <Numbers />
