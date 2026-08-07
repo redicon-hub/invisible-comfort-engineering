@@ -8,7 +8,9 @@ const heroPool = heroPoolAsset.url;
 import heroIndustrialAsset from "@/assets/hero-industriale-arezzo.jpg.asset.json";
 
 const heroIndustrial = heroIndustrialAsset.url;
-import heroRetail from "@/assets/hero-retail.jpg";
+import heroRetailAsset from "@/assets/hero-boutique-atelier.jpg.asset.json";
+
+const heroRetail = heroRetailAsset.url;
 import residence from "@/assets/residence.jpg";
 import bathroomDetail from "@/assets/bathroom-detail.jpg";
 import energy from "@/assets/energy.jpg";
