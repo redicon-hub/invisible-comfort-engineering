@@ -17,7 +17,7 @@ import residence from "@/assets/residence.jpg";
 import energy from "@/assets/energy.jpg";
 import finalCta from "@/assets/final-cta.jpg";
 import portfolioHospitality from "@/assets/portfolio-hospitality.jpg";
-import portfolioPlant from "@/assets/portfolio-plant.jpg";
+
 import realAtelier from "@/assets/atelier_alta_moda.jpg.asset.json";
 import realPoolChianti from "@/assets/piscina_privata_toscana.jpg.asset.json";
 import realIndustrial from "@/assets/impianti_industriali.jpg.asset.json";
