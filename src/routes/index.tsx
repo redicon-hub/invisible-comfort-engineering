@@ -14,7 +14,8 @@ import poolChiantiAsset from "@/assets/piscina-casale-chianti.jpg.asset.json";
 const heroRetail = heroRetailAsset.url;
 import residence from "@/assets/residence.jpg";
 
-import finalCta from "@/assets/final-cta.jpg";
+import finalCtaAsset from "@/assets/contatti-piscina-casale.jpg.asset.json";
+const finalCta = finalCtaAsset.url;
 import portfolioHospitality from "@/assets/portfolio-hospitality.jpg";
 
 import realAtelier from "@/assets/atelier_alta_moda.jpg.asset.json";
