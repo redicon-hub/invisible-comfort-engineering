@@ -616,7 +616,7 @@ function ResidencesFeature() {
           </div>
           <div className="md:col-span-5 flex flex-col justify-between gap-8">
             <div className="relative aspect-[4/5] overflow-hidden">
-              <img src={bathroomDetail} alt="Dettaglio bagno su misura" loading="lazy" className="h-full w-full object-cover" />
+              <img src={residenzaBagno.url} alt="Bagno padronale in travertino con doccia a filo pavimento" loading="lazy" className="h-full w-full object-cover" />
             </div>
           </div>
           <div className="md:col-span-7 md:col-start-1">
