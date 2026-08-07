@@ -442,8 +442,9 @@ function PoolFeature() {
       <div className="grid md:grid-cols-2">
         <div className="relative h-[70svh] md:h-[110svh] md:sticky md:top-0">
           <img
-            src={poolLandscape}
-            alt="Piscina a sfioro integrata nel paesaggio toscano"
+            src={poolSectionAsset.url}
+            alt="Piscina interna con idromassaggio e vista panoramica sulle colline toscane"
+
             loading="lazy"
             className="h-full w-full object-cover"
           />
