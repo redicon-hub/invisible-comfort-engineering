@@ -205,7 +205,7 @@ const NAV = [
   { label: "Piscine", href: "#piscine" },
   { label: "Residenze", href: "#residenze" },
   { label: "Energie", href: "#energie" },
-  { label: "Progetti", href: "#progetti" },
+  { label: "Progetti", href: "/progetti" },
   { label: "Contatti", href: "#contatti" },
 ];
 
@@ -858,7 +858,8 @@ function Portfolio() {
           </button>
         ))}
       </div>
-      <div className="container-editorial mt-16 text-center">
+      <div className="container-editorial mt-16 flex flex-wrap justify-center gap-4">
+        <a href="/progetti" className="btn-primary">Tutti i progetti <span aria-hidden>→</span></a>
         <a href="#contatti" className="btn-ghost text-graphite">Parliamo del tuo progetto</a>
       </div>
 
