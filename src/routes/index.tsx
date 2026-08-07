@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 
-import heroPool from "@/assets/hero-pool.jpg";
+import heroPoolAsset from "@/assets/hero-piscina-toscana.jpg.asset.json";
+import poolSectionAsset from "@/assets/piscina-idromassaggio-panoramica.jpg.asset.json";
+
+const heroPool = heroPoolAsset.url;
 import heroIndustrial from "@/assets/hero-industrial.jpg";
 import heroRetail from "@/assets/hero-retail.jpg";
 import residence from "@/assets/residence.jpg";
