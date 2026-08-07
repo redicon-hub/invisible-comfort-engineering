@@ -401,15 +401,15 @@ function BusinessWorlds() {
   return (
     <section className="bg-lime py-28 md:py-40">
       <div className="container-editorial mb-16 md:mb-20 max-w-3xl">
-        <p className="eyebrow">Tre mondi</p>
+        <p className="eyebrow">Quattro aree di intervento</p>
         <h2 className="display-section mt-6 text-graphite">
-          Tre mondi. <em className="italic">Un solo standard.</em>
+          Quattro mondi. <em className="italic">Un solo standard.</em>
         </h2>
         <p className="body-editorial mt-6">
           Precisione tecnica, cura estetica e responsabilità operativa accompagnano ogni progetto.
         </p>
       </div>
-      <div className="container-editorial grid gap-4 md:grid-cols-3 md:gap-3">
+      <div className="container-editorial grid gap-4 md:grid-cols-2 md:gap-3 lg:grid-cols-4">
         {WORLDS.map((w, idx) => (
           <button
             key={idx}
