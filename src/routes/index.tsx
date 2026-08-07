@@ -1004,7 +1004,7 @@ const PROJECT_TYPES = [
   "Boutique o spazio retail",
   "Villa o residenza",
   "Piscina",
-  "Fotovoltaico ed energia",
+  "Atelier moda",
   "Manutenzione",
   "Altro",
 ];
