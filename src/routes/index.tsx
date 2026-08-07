@@ -817,6 +817,7 @@ function Portfolio() {
                 <span>{p.loc}</span>
               </div>
               <h3 className="mt-3 font-serif text-xl md:text-2xl">{p.title}</h3>
+              <p className="mt-2 max-w-md text-sm leading-relaxed text-lime/75">{p.note}</p>
               <span className="mt-4 inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Apri il progetto <span aria-hidden>→</span>
               </span>
