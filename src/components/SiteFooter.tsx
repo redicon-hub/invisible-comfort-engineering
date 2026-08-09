@@ -23,7 +23,7 @@ export function SiteFooter() {
       <div className="container-editorial py-20 md:py-24">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="font-serif text-3xl text-lime">SP Termoidraulica</p>
+            <SiteLogo variant="light" className="h-12 md:h-14" />
             <p className="mt-6 font-serif text-xl italic text-lime">
               Impianti, acqua ed energia per spazi destinati a durare.
             </p>

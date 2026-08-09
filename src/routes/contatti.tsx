@@ -64,9 +64,8 @@ function ContattiPage() {
     <div className="min-h-screen bg-lime text-graphite">
       <header className="border-b border-taupe/15">
         <div className="container-editorial flex items-center justify-between py-5">
-          <Link to="/" className="flex items-baseline gap-3">
-            <span className="font-serif text-2xl tracking-tight">SP</span>
-            <span className="eyebrow">Termoidraulica</span>
+          <Link to="/" className="flex items-center" aria-label="SP Termoidraulica — home">
+            <SiteLogo />
           </Link>
           <Link to="/" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em]">
             <ArrowLeft className="h-4 w-4" aria-hidden /> Home
