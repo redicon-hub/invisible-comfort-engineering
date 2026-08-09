@@ -13,7 +13,7 @@ export function SiteLogo({ variant = "dark", className = "" }: Props) {
       alt="SP Termoidraulica"
       width={812}
       height={260}
-      className={`w-auto ${className || "h-8 md:h-9"}`}
+      className={`w-auto ${className || "h-10 md:h-12"}`}
     />
   );
 
