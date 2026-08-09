@@ -1,3 +1,4 @@
+import { SiteLogo } from "@/components/SiteLogo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Mail, Phone, PhoneCall, MessageCircle, ArrowLeft } from "lucide-react";
 import { SiteFooter, CONTACTS } from "@/components/SiteFooter";

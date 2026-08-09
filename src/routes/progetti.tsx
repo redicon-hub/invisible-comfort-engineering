@@ -1,3 +1,4 @@
+import { SiteLogo } from "@/components/SiteLogo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
 import { PROGETTI } from "@/data/progetti";
