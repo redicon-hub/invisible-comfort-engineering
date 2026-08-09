@@ -1,3 +1,4 @@
+import { SiteLogo } from "@/components/SiteLogo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
 import { PROGETTI } from "@/data/progetti";
@@ -103,9 +104,8 @@ function ProgettiPage() {
     <main className="bg-ivory text-graphite">
       <header className="border-b border-graphite/10 bg-ivory/90 backdrop-blur-md sticky top-0 z-40">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 lg:px-12">
-          <Link to="/" className="flex items-baseline gap-3">
-            <span className="font-serif text-2xl tracking-tight">SP</span>
-            <span className="text-[11px] uppercase tracking-[0.3em] text-graphite/60">Termoidraulica</span>
+          <Link to="/" className="flex items-center" aria-label="SP Termoidraulica — home">
+            <SiteLogo />
           </Link>
           <nav className="flex items-center gap-6 text-[12px] uppercase tracking-[0.2em]">
             <Link to="/" className="link-underline link-underline-hover hidden sm:inline">

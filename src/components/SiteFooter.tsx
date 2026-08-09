@@ -1,3 +1,4 @@
+import { SiteLogo } from "@/components/SiteLogo";
 import { Link } from "@tanstack/react-router";
 import { MapPin, Mail, Phone, PhoneCall, MessageCircle } from "lucide-react";
 
@@ -23,7 +24,7 @@ export function SiteFooter() {
       <div className="container-editorial py-20 md:py-24">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="font-serif text-3xl text-lime">SP Termoidraulica</p>
+            <span className="inline-flex items-center rounded-2xl bg-lime/95 px-5 py-4"><SiteLogo className="h-10 md:h-12" /></span>
             <p className="mt-6 font-serif text-xl italic text-lime">
               Impianti, acqua ed energia per spazi destinati a durare.
             </p>

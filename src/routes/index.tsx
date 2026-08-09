@@ -1,3 +1,4 @@
+import { SiteLogo } from "@/components/SiteLogo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useEffect, useRef, useState, type FormEvent } from "react";
@@ -246,9 +247,8 @@ function Header() {
         }`}
       >
         <div className="container-editorial flex items-center justify-between py-5 md:py-6">
-          <a href="#top" className="flex items-baseline gap-3">
-            <span className="font-serif text-2xl tracking-tight">SP</span>
-            <span className="eyebrow hidden sm:inline" style={{ color: "inherit" }}>Termoidraulica</span>
+          <a href="#top" className="flex items-center" aria-label="SP Termoidraulica — home">
+            <SiteLogo variant={scrolled ? "dark" : "light"} />
           </a>
 
           <nav aria-label="Menu principale" className="hidden lg:flex items-center gap-9">
