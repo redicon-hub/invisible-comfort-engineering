@@ -64,11 +64,11 @@ function ContattiPage() {
   return (
     <div className="min-h-screen bg-lime text-graphite">
       <header className="border-b border-taupe/15">
-        <div className="container-editorial flex items-center justify-between py-5">
-          <Link to="/" className="flex items-center" aria-label="SP Termoidraulica — home">
+        <div className="container-editorial flex items-center justify-between gap-4 py-5">
+          <Link to="/" className="flex min-w-0 shrink-0 items-center" aria-label="SP Termoidraulica — home">
             <SiteLogo />
           </Link>
-          <Link to="/" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em]">
+          <Link to="/" className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap text-xs uppercase tracking-[0.18em]">
             <ArrowLeft className="h-4 w-4" aria-hidden /> Home
           </Link>
         </div>
