@@ -103,15 +103,15 @@ function ProgettiPage() {
   return (
     <main className="bg-ivory text-graphite">
       <header className="border-b border-graphite/10 bg-ivory/90 backdrop-blur-md sticky top-0 z-40">
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 lg:px-12">
-          <Link to="/" className="flex items-center" aria-label="SP Termoidraulica — home">
+        <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5 lg:px-12">
+          <Link to="/" className="flex min-w-0 shrink-0 items-center" aria-label="SP Termoidraulica — home">
             <SiteLogo />
           </Link>
-          <nav className="flex items-center gap-6 text-[12px] uppercase tracking-[0.2em]">
+          <nav className="flex shrink-0 items-center gap-4 text-[12px] uppercase tracking-[0.2em] sm:gap-6">
             <Link to="/" className="link-underline link-underline-hover hidden sm:inline">
               Home
             </Link>
-            <a href="/#contatti" className="btn-primary text-[11px]">
+            <a href="/#contatti" className="btn-primary hidden whitespace-nowrap text-[11px] sm:inline-flex">
               Contattaci <span aria-hidden>→</span>
             </a>
           </nav>

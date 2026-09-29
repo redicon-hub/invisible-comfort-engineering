@@ -246,32 +246,32 @@ function Header() {
             : "text-lime [text-shadow:0_1px_16px_rgba(0,0,0,0.55)]"
         }`}
       >
-        <div className="container-editorial flex items-center justify-between py-5 md:py-6">
-          <a href="#top" className="flex items-center" aria-label="SP Termoidraulica — home">
+        <div className="container-editorial flex items-center justify-between gap-4 py-4 sm:py-5 md:py-6">
+          <a href="#top" className="flex min-w-0 shrink-0 items-center" aria-label="SP Termoidraulica — home">
             <SiteLogo variant={scrolled ? "dark" : "light"} />
           </a>
 
-          <nav aria-label="Menu principale" className="hidden lg:flex items-center gap-9">
+          <nav aria-label="Menu principale" className="hidden min-w-0 flex-1 items-center justify-center gap-5 2xl:flex">
             {NAV.slice(0, -1).map((n) => (
               <a
                 key={n.href}
                 href={n.href}
-                className="text-xs font-medium tracking-[0.18em] uppercase transition-opacity hover:opacity-60"
+                className="whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.14em] transition-opacity hover:opacity-60"
               >
                 {n.label}
               </a>
             ))}
           </nav>
-          <div className="flex items-center gap-4">
+          <div className="flex shrink-0 items-center gap-3">
             <a
               href="#contatti"
-              className="btn-primary hidden md:inline-flex"
+              className="btn-primary hidden whitespace-nowrap md:inline-flex"
             >
               Contattaci <span aria-hidden>→</span>
             </a>
             <button
               onClick={() => setOpen(true)}
-              className="lg:hidden inline-flex h-10 w-10 items-center justify-center border border-current"
+              className="inline-flex h-10 w-10 shrink-0 items-center justify-center border border-current 2xl:hidden"
               aria-label="Apri menu"
             >
               <span className="block h-px w-5 bg-current" />
